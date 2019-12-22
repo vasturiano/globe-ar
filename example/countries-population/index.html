@@ -17,7 +17,7 @@
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
       .polygonCapColor(feat => 'rgba(200, 0, 0, 0.6)')
       .polygonSideColor(() => 'rgba(0, 100, 0, 0.05)')
-      .polygonLabel(({ data: { properties: d }}) => `
+      .polygonLabel(({ properties: d }) => `
         <b>${d.ADMIN} (${d.ISO_A2})</b> <br />
         Population: <i>${Math.round(+d.POP_EST / 1e4) / 1e2}M</i>
       `);

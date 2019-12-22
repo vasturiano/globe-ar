@@ -707,13 +707,13 @@ acorn@^7.1.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.1.0.tgz#949d36f2c292535da602283586c2477c57eb2d6c"
   integrity sha512-kL5CuoXA/dgxlBbVrflsflzQ3PAas7RYZB52NOm/6839iVYJgKMJ3cQJD+t2i5+qFa8h3MDpEOJiS64E8JLnSQ==
 
-aframe-globe-component@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/aframe-globe-component/-/aframe-globe-component-1.1.0.tgz#69ba6ae5b2b8d927dbacce91a2954896446ec026"
-  integrity sha512-7RqAFfGmgbKqpv6LTxDlklxVi4nRIvmbCUft5YyAgU045J5A0A7v1WAtkfaSW/VAaTV6DUa0Mi97/uRx1jkiGw==
+aframe-globe-component@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/aframe-globe-component/-/aframe-globe-component-1.1.2.tgz#7dda8f1018a721e1dda306f80bcb68501df86273"
+  integrity sha512-gGlbVFKhLMUd41j5TNbDKW6EDaZNRSju6nq7yaZG0oyaIlhLLhCiFbo8W5BQxX6y229+xQvVm7WZeeDL+HY84Q==
   dependencies:
     accessor-fn "^1.2.2"
-    three-globe "^2.5.1"
+    three-globe "^2.5.3"
 
 ansi-styles@^3.2.1:
   version "3.2.1"
@@ -1214,10 +1214,10 @@ rollup-pluginutils@^2.8.1:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^1.27.13:
-  version "1.27.13"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.27.13.tgz#d6d3500512daacbf8de54d2800de62d893085b90"
-  integrity sha512-hDi7M07MpmNSDE8YVwGVFA8L7n8jTLJ4lG65nMAijAyqBe//rtu4JdxjUBE7JqXfdpqxqDTbCDys9WcqdpsQvw==
+rollup@^1.27.14:
+  version "1.27.14"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.27.14.tgz#940718d5eec1a6887e399aa0089944bae5c4f377"
+  integrity sha512-DuDjEyn8Y79ALYXMt+nH/EI58L5pEw5HU9K38xXdRnxQhvzUTI/nxAawhkAHUQeudANQ//8iyrhVRHJBuR6DSQ==
   dependencies:
     "@types/estree" "*"
     "@types/node" "*"
@@ -1306,10 +1306,10 @@ three-geojson-geometry@^1.0.5:
   dependencies:
     earcut "^2.2.1"
 
-three-globe@^2.5.1:
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/three-globe/-/three-globe-2.5.2.tgz#972621eda1843e936e69d1b7371fae074f53a8bb"
-  integrity sha512-/odiO7sB9si7H12hwGyCxmvEUTanQC7zX52mOqzW+3/r9HpIDhJ5gAgHbqfsE1Fp6Mci7YCubOBRgwFww8i8GA==
+three-globe@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/three-globe/-/three-globe-2.5.3.tgz#9830a51803beb1f810b35a5006e374b4cc2732e0"
+  integrity sha512-1kiYeuQivfcThnUjGae6cJE5MnF3ayHjbt2dXj6yor6JvtwIxAbn/mEAwWCus13beVt87A8BUpqj4l8HEN5YmQ==
   dependencies:
     "@tweenjs/tween.js" "^18.5.0"
     accessor-fn "^1.2.2"
