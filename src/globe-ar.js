@@ -7,7 +7,7 @@ import accessorFn from 'accessor-fn';
 
 //
 
-const GLOBE_RADIUS = 200; // in GL units
+const GLOBE_RADIUS = 100; // in GL units
 
 export default Kapsule({
 
@@ -187,8 +187,8 @@ export default Kapsule({
     changedProps.hasOwnProperty('width') && state.width && (state.container.style.width = state.width);
     changedProps.hasOwnProperty('height') && state.height && (state.container.style.height = state.height);
 
-    changedProps.hasOwnProperty('glScale') &&
-      state.globe.setAttribute('scale', [...new Array(3)].map(() => 1 / (state.glScale * GLOBE_RADIUS)).join(' '));
+    changedProps.hasOwnProperty('globeScale') &&
+      state.globe.setAttribute('scale', [...new Array(3)].map(() => 1 / (state.globeScale * GLOBE_RADIUS)).join(' '));
 
     changedProps.hasOwnProperty('yOffset') &&
     state.globe.setAttribute('position', `0 ${state.yOffset} 0`);
