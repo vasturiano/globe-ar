@@ -23,7 +23,6 @@
     (document.getElementById('globeViz'))
 
     .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
-    .pointOfView({ lat: 39.6, lng: -98.5, altitude: 2 }) // aim at continental US centroid
 
     .arcLabel(d => `${d.airline}: ${d.srcIata} &#8594; ${d.dstIata}`)
     .arcStartLat(d => +d.srcAirport.lat)
