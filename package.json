@@ -39,6 +39,7 @@
     "dist/**/*"
   ],
   "dependencies": {
+    "accessor-fn": "^1.2.2",
     "aframe-globe-component": "^1.1.0",
     "kapsule": "^1.12.1"
   },
