@@ -24,7 +24,6 @@
 
     .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
 
-    .arcLabel(d => `${d.airline}: ${d.srcIata} &#8594; ${d.dstIata}`)
     .arcStartLat(d => +d.srcAirport.lat)
     .arcStartLng(d => +d.srcAirport.lng)
     .arcEndLat(d => +d.dstAirport.lat)

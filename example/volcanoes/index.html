@@ -19,14 +19,6 @@
 
     const getAlt = d => d.elevation * 5e-5;
 
-    const getTooltip = d => `
-      <div style="text-align: center">
-        <div><b>${d.name}</b>, ${d.country}</div>
-        <div>(${d.type})</div>
-        <div>Elevation: <em>${d.elevation}</em>m</div>
-      </div>
-    `;
-
     const myGlobe = GlobeAR()
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
       .pointLat('lat')
@@ -34,7 +26,6 @@
       .pointAltitude(getAlt)
       .pointRadius(0.12)
       .pointColor(d => catColor(d.type))
-      .pointLabel(getTooltip)
       .labelLat('lat')
       .labelLng('lon')
       .labelAltitude(d => getAlt(d) + 1e-6)
@@ -44,7 +35,6 @@
       .labelText('name')
       .labelSize(0.15)
       .labelResolution(1)
-      .labelLabel(getTooltip)
       (document.getElementById('globeViz'));
 
     fetch('../datasets/world_volcanoes.json').then(res => res.json()).then(volcanoes => {

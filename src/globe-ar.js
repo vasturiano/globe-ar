@@ -3,7 +3,6 @@ import 'aframe-globe-component';
 //import * as a from 'ar.js/aframe/build/aframe-ar.js';
 
 import Kapsule from 'kapsule';
-import accessorFn from 'accessor-fn';
 
 //
 
@@ -17,13 +16,12 @@ export default Kapsule({
     yOffset: { default: 1.5 }, // marker size units
     globeScale: { default: 1 }, // globe radius units per marker width
 
+    onCenterHover: {},
     globeImageUrl: {},
     bumpImageUrl: {},
     showAtmosphere: { default: true },
     showGraticules: { default: false },
     pointsData: { default: [] },
-    pointLabel: { default: 'name' },
-    pointDesc: { default: 'desc' },
     pointLat: { default: 'lat' },
     pointLng: { default: 'lng' },
     pointColor: { default: () => '#ffffaa' },
@@ -33,8 +31,6 @@ export default Kapsule({
     pointsMerge: { default: false }, // boolean. Whether to merge all points into a single mesh for rendering performance
     pointsTransitionDuration: { default: 1000 }, // ms
     arcsData: { default: [] },
-    arcLabel: { default: 'name' },
-    arcDesc: { default: 'desc' },
     arcStartLat: { default: 'startLat' },
     arcStartLng: { default: 'startLng' },
     arcEndLat: { default: 'endLat' },
@@ -51,8 +47,6 @@ export default Kapsule({
     arcDashAnimateTime: { default: 0 }, // ms
     arcsTransitionDuration: { default: 1000 }, // ms
     polygonsData: { default: [] },
-    polygonLabel: { default: 'name' },
-    polygonDesc: { default: 'desc' },
     polygonGeoJsonGeometry: { default: 'geometry' },
     polygonSideColor: { default: () => '#ffffaa' },
     polygonCapColor: { default: () => '#ffffaa' },
@@ -60,8 +54,6 @@ export default Kapsule({
     polygonAltitude: { default: 0.1 }, // in units of globe radius
     polygonsTransitionDuration: { default: 1000 }, // ms
     pathsData: { default: [] },
-    pathLabel: { default: 'name' },
-    pathDesc: { default: 'desc' },
     pathPoints: { default: pnts => pnts },
     pathPointLat: { default: arr => arr[0] },
     pathPointLng: { default: arr => arr[1] },
@@ -75,8 +67,6 @@ export default Kapsule({
     pathDashAnimateTime: { default: 0 }, // ms
     pathTransitionDuration: { default: 1000 }, // ms
     hexBinPointsData: { default: [] },
-    hexLabel: { default: 'name' },
-    hexDesc: { default: 'desc' },
     hexBinPointLat: { default: 'lat' },
     hexBinPointLng: { default: 'lng' },
     hexBinPointWeight: { default: 1 },
@@ -88,8 +78,6 @@ export default Kapsule({
     hexBinMerge: { default: false }, // boolean. Whether to merge all hex geometries into a single mesh for rendering performance
     hexTransitionDuration: { default: 1000 }, // ms
     hexPolygonsData: { default: [] },
-    hexPolygonLabel: { default: 'name' },
-    hexPolygonDesc: { default: 'desc' },
     hexPolygonGeoJsonGeometry: { default: 'geometry' },
     hexPolygonColor: { default: () => '#ffffaa' },
     hexPolygonAltitude: { default: 0.001 }, // in units of globe radius
@@ -97,8 +85,6 @@ export default Kapsule({
     hexPolygonMargin: { default: 0.2 }, // in fraction of hex diameter
     hexPolygonsTransitionDuration: { default: 0 }, // ms
     labelsData: { default: [] },
-    labelLabel: { default: 'name' },
-    labelDesc: { default: 'desc' },
     labelLat: { default: 'lat' },
     labelLng: { default: 'lng' },
     labelAltitude: { default: 0 }, // in units of globe radius
@@ -113,8 +99,6 @@ export default Kapsule({
     labelDotOrientation: { default: () => 'bottom' }, // right, top, bottom
     labelsTransitionDuration: { default: 1000 }, // ms
     customLayerData: { default: [] },
-    customLayerLabel: { default: 'name' },
-    customLayerDesc: { default: 'desc' },
     customThreeObject: {},
     customThreeObjectUpdate: { triggerUpdate: false }
   },
@@ -168,12 +152,6 @@ export default Kapsule({
     state.globe.setAttribute('globe', null);
     arMarker.appendChild(state.globe);
 
-    // link label/desc props
-    state.globe.setAttribute('globe', {
-      label: ({type, data}) => accessorFn(state[`${type}Label`])(data),
-      desc: ({type, data}) => accessorFn(state[`${type}Desc`])(data)
-    });
-
     const cameraEntity = document.createElement('a-entity');
     cameraEntity.setAttribute('camera', '');
     scene.appendChild(cameraEntity);
@@ -194,6 +172,7 @@ export default Kapsule({
     state.globe.setAttribute('position', `0 ${state.yOffset} 0`);
 
     const passThroughProps = [
+      'onCenterHover',
       'globeImageUrl',
       'bumpImageUrl',
       'showAtmosphere',

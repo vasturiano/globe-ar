@@ -20,10 +20,6 @@
         .hexPolygonResolution(3)
         .hexPolygonMargin(0.3)
         .hexPolygonColor(() => `#${Math.round(Math.random() * Math.pow(2, 24)).toString(16).padStart(6, '0')}`)
-        .hexPolygonLabel(({ properties: d }) => `
-          <b>${d.ADMIN} (${d.ISO_A2})</b> <br />
-          Population: <i>${d.POP_EST}</i>
-        `)
         (document.getElementById('globeViz'))
     });
   </script>
