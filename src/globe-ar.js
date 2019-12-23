@@ -148,7 +148,7 @@ export default Kapsule({
     scene.appendChild(arMarker);
 
     // Add globe entity
-    state.globe = document.createElement('a-entity')
+    state.globe = document.createElement('a-entity');
     state.globe.setAttribute('globe', null);
     arMarker.appendChild(state.globe);
 
