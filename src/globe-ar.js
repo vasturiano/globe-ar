@@ -106,6 +106,7 @@ export default Kapsule({
   methods: {
     // pass-through methods
     ...Object.assign({}, ...[
+      'globeMaterial',
       'getCoords',
       'toGeoCoords'
     ].map(method => ({
