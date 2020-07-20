@@ -51,7 +51,8 @@ export default Kapsule({
     polygonSideColor: { default: () => '#ffffaa' },
     polygonCapColor: { default: () => '#ffffaa' },
     polygonStrokeColor: {},
-    polygonAltitude: { default: 0.1 }, // in units of globe radius
+    polygonAltitude: { default: 0.01 }, // in units of globe radius
+    polygonCapCurvatureResolution: { default: 10 },
     polygonsTransitionDuration: { default: 1000 }, // ms
     pathsData: { default: [] },
     pathPoints: { default: pnts => pnts },
@@ -75,6 +76,7 @@ export default Kapsule({
     hexTopColor: { default: () => '#ffffaa' },
     hexSideColor: { default: () => '#ffffaa' },
     hexAltitude: { default: ({ sumWeight }) => sumWeight * 0.01 }, // in units of globe radius
+    hexTopCurvatureResolution: { default: 10 },
     hexBinMerge: { default: false }, // boolean. Whether to merge all hex geometries into a single mesh for rendering performance
     hexTransitionDuration: { default: 1000 }, // ms
     hexPolygonsData: { default: [] },
@@ -83,6 +85,7 @@ export default Kapsule({
     hexPolygonAltitude: { default: 0.001 }, // in units of globe radius
     hexPolygonResolution: { default: 3 }, // 0-15. Level 0 partitions the earth in 122 (mostly) hexagonal cells. Each subsequent level sub-divides the previous in roughly 7 hexagons.
     hexPolygonMargin: { default: 0.2 }, // in fraction of hex diameter
+    hexPolygonCurvatureResolution: { default: 10 },
     hexPolygonsTransitionDuration: { default: 0 }, // ms
     labelsData: { default: [] },
     labelLat: { default: 'lat' },
@@ -209,6 +212,7 @@ export default Kapsule({
       'polygonSideColor',
       'polygonStrokeColor',
       'polygonAltitude',
+      'polygonCapCurvatureResolution',
       'polygonsTransitionDuration',
       'pathsData',
       'pathPoints',
@@ -229,6 +233,7 @@ export default Kapsule({
       'hexBinPointWeight',
       'hexBinResolution',
       'hexMargin',
+      'hexTopCurvatureResolution',
       'hexTopColor',
       'hexSideColor',
       'hexAltitude',
@@ -240,6 +245,7 @@ export default Kapsule({
       'hexPolygonAltitude',
       'hexPolygonResolution',
       'hexPolygonMargin',
+      'hexPolygonCurvatureResolution',
       'hexPolygonsTransitionDuration',
       'labelsData',
       'labelLat',
