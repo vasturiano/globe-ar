@@ -24,6 +24,7 @@ Check out the examples:
 * [Path Lines](https://vasturiano.github.io/globe-ar/example/random-paths/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/random-paths/index.html))
 * [Map Labels](https://vasturiano.github.io/globe-ar/example/world-cities/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/world-cities/index.html))
 * [Hexed Country Polygons](https://vasturiano.github.io/globe-ar/example/hexed-polygons/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/hexed-polygons/index.html))
+* [Tiles](https://vasturiano.github.io/globe-ar/example/tiles/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/tiles/index.html))
 * [Custom Layer](https://vasturiano.github.io/globe-ar/example/custom-layer/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/custom-layer/index.html))
 * [World Population](https://vasturiano.github.io/globe-ar/example/world-population/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/world-population/index.html))
 * [Recent Earthquakes](https://vasturiano.github.io/globe-ar/example/earthquakes/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/earthquakes/index.html))
@@ -186,6 +187,21 @@ GlobeAR({ configOptions })(<domElement>)
 | <b>hexPolygonMargin</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Hexed polygon object accessor function, attribute or a numeric constant for the radial margin of each hexagon. Margins above `0` will create gaps between adjacent hexagons within a polygon. The margin is specified in terms of fraction of the hexagon's surface diameter. Values below `0` or above `1` are disadvised. | 0.2 |
 | <b>hexPolygonCurvatureResolution</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Hexed polygon object accessor function, attribute or a numeric constant for the resolution (in angular degrees) of each hexed polygon surface curvature. The finer the resolution, the more the polygon hexes are fragmented into smaller faces to approximate the spheric surface, at the cost of performance. | 5 |
 | <b>hexPolygonsTransitionDuration</b>([<i>num</i>]) | Getter/setter for duration (ms) of the transition to animate hexed polygons altitude and margin changes. A value of `0` will move the hexagons immediately to their final state. New hexed polygons are animated by sizing each hexagon from `0` radius. | 0 |
+
+### Tiles Layer
+
+| Method | Description | Default |
+| --- | --- | :--: |
+| <b>tilesData</b>([<i>array</i>]) | Getter/setter for the list of tiles to represent in the tiles map layer. Each tile is displayed as a spherical surface segment. The segments can be placed side-by-side for a tiled surface and each can be styled separately. | `[]` |
+| <b>tileLat</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Tile object accessor function, attribute or a numeric constant for the segment's centroid latitude coordinate. | `lat` |
+| <b>tileLng</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Tile object accessor function, attribute or a numeric constant for the segment's centroid longitude coordinate. | `lng` |
+| <b>tileAltitude</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Tile object accessor function, attribute or a numeric constant for the segment's altitude in terms of globe radius units. | 0.01 |
+| <b>tileWidth</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Tile object accessor function, attribute or a numeric constant for the segment's longitudinal width, in angular degrees. | 1 |
+| <b>tileHeight</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Tile object accessor function, attribute or a numeric constant for the segment's latitudinal height, in angular degrees. | 1 |
+| <b>tileUseGlobeProjection</b>([<i>boolean</i>, <i>str</i> or <i>fn</i>]) | Tile object accessor function, attribute or a boolean constant for whether to use the globe's projection to shape the segment to its relative tiled position (`true`), or break free from this projection and shape the segment as if it would be laying directly on the equatorial perimeter (`false`). | `true` |
+| <b>tileMaterial</b>([<i>str</i> or <i>fn</i>]) | Tile object accessor function or attribute for the [ThreeJS material](https://threejs.org/docs/#api/en/materials/Material) used to style the segment's surface. | `() => new MeshLambertMaterial({ color: '#ffbb88' })` |
+| <b>tileCurvatureResolution</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Tile object accessor function, attribute or a numeric constant for the resolution (in angular degrees) of the surface curvature. The finer the resolution, the more the tile geometry is fragmented into smaller faces to approximate the spheric surface, at the cost of performance. | 5 |
+| <b>tilesTransitionDuration</b>([<i>num</i>]) | Getter/setter for duration (ms) of the transition to animate tile changes involving geometry modifications. A value of `0` will move the tiles immediately to their final position. New tiles are animated by scaling them from the centroid outwards. | 1000 |
 
 ### Labels Layer
 

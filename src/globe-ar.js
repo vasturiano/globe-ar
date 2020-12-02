@@ -87,6 +87,16 @@ export default Kapsule({
     hexPolygonMargin: { default: 0.2 }, // in fraction of hex diameter
     hexPolygonCurvatureResolution: { default: 5 },
     hexPolygonsTransitionDuration: { default: 0 }, // ms
+    tilesData: { default: [] },
+    tileLat: { default: 'lat' }, // tile centroid
+    tileLng: { default: 'lng' },
+    tileAltitude: { default: 0.01 }, // in units of globe radius
+    tileWidth: { default: 1 }, // in lng degrees
+    tileHeight: { default: 1 }, // in lat degrees
+    tileUseGlobeProjection: { default: true }, // whether to size tiles relative to the globe coordinate system, or independently
+    tileMaterial: {},
+    tileCurvatureResolution: { default: 5 }, // in angular degrees
+    tilesTransitionDuration: { default: 1000, triggerUpdate: false }, // ms
     labelsData: { default: [] },
     labelLat: { default: 'lat' },
     labelLng: { default: 'lng' },
@@ -129,6 +139,7 @@ export default Kapsule({
       this.pathsData([]);
       this.hexBinPointsData([]);
       this.hexPolygonsData([]);
+      this.tilesData([]);
       this.labelsData([]);
       this.customLayerData([]);
     }
@@ -247,6 +258,16 @@ export default Kapsule({
       'hexPolygonMargin',
       'hexPolygonCurvatureResolution',
       'hexPolygonsTransitionDuration',
+      'tilesData',
+      'tileLat',
+      'tileLng',
+      'tileAltitude',
+      'tileWidth',
+      'tileHeight',
+      'tileUseGlobeProjection',
+      'tileMaterial',
+      'tileCurvatureResolution',
+      'tilesTransitionDuration',
       'labelsData',
       'labelLat',
       'labelLng',
