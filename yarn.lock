@@ -898,12 +898,13 @@ accessor-fn@^1.3.0:
   resolved "https://registry.yarnpkg.com/accessor-fn/-/accessor-fn-1.3.0.tgz#52cfc21ff5633a12177f757ec1e4c4fbb361bb02"
   integrity sha512-NC5BYjrfBonksWxXrZ1WsPnh70sTQC2Uas9IL0RHQN5OETP4dO/bviPxZ7zTOahhRQ7o6avJg3ImJvRbuyHASg==
 
-aframe-globe-component@^1.5.2:
-  version "1.5.2"
-  resolved "https://registry.yarnpkg.com/aframe-globe-component/-/aframe-globe-component-1.5.2.tgz#ae65470204aad93ce41f986ada9adbe17002d785"
-  integrity sha512-BVpFMj4LH28rk/ZuCEIjqvP9lK3TkPPlZV4FQi3/h5T7psH6J9MlkSssSbPltuenXjWfL/djHDj+2p2dI4/Mlw==
+aframe-globe-component@^1.5.3:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/aframe-globe-component/-/aframe-globe-component-1.5.3.tgz#b40bd923d895d3cc07ea62de3a51fb93f3f99140"
+  integrity sha512-xBRO4ksJ3Vy2MkXWu87bQrtsDdxs88ck3Ho9dPhuKhJKygUpbQ5mExDixtLw9IdpKXAnNDEhs35+8zd1fsWojA==
   dependencies:
     accessor-fn "^1.3.0"
+    three ">=0.88.0"
     three-globe "^2.14.3"
 
 ansi-styles@^3.2.1:
@@ -1692,6 +1693,11 @@ three-globe@^2.14.3:
     three-fatline "^0.4.2"
     three-geojson-geometry "^1.1.2"
     tinycolor2 "^1.4.2"
+
+three@>=0.88.0:
+  version "0.125.2"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.125.2.tgz#dcba12749a2eb41522e15212b919cd3fbf729b12"
+  integrity sha512-7rIRO23jVKWcAPFdW/HREU2NZMGWPBZ4XwEMt0Ak0jwLUKVJhcKM55eCBWyGZq/KiQbeo1IeuAoo/9l2dzhTXA==
 
 tinycolor2@^1.4.2:
   version "1.4.2"
