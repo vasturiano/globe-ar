@@ -238,9 +238,9 @@
     js-tokens "^4.0.0"
 
 "@babel/parser@^7.12.13":
-  version "7.12.13"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.13.tgz#3ee7be4131fe657ba9143d5c5b3a9f253fdb75e9"
-  integrity sha512-z7n7ybOUzaRc3wwqLpAX8UFIXsrVXUJhtNGBwAnLz6d1KUapqyq7ad2La8gZ6CXhHmGAIL32cop8Tst4/PNWLw==
+  version "7.12.14"
+  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.12.14.tgz#4adb7c5eef1d437ef965ad1569cd826db8c11dc9"
+  integrity sha512-xcfxDq3OrBnDsA/Z8eK5/2iPcLD8qbOaSSfOw4RA6jp4i7e6dEQ7+wTwxItEwzcXPQcsry5nZk96gmVPKletjQ==
 
 "@babel/plugin-proposal-async-generator-functions@^7.12.13":
   version "7.12.13"
@@ -898,13 +898,13 @@ accessor-fn@^1.3.0:
   resolved "https://registry.yarnpkg.com/accessor-fn/-/accessor-fn-1.3.0.tgz#52cfc21ff5633a12177f757ec1e4c4fbb361bb02"
   integrity sha512-NC5BYjrfBonksWxXrZ1WsPnh70sTQC2Uas9IL0RHQN5OETP4dO/bviPxZ7zTOahhRQ7o6avJg3ImJvRbuyHASg==
 
-aframe-globe-component@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/aframe-globe-component/-/aframe-globe-component-1.5.1.tgz#71adc6b839b5e98e1359f77a2e953cbd8bca1302"
-  integrity sha512-FqSQaVLfQU96mG7GUH9X3KoTXzB8+18sZVZWXRFUa5YGa7L6TTdMo/W65H7YecFklxKJnO63tgjR7P7K0RHw0Q==
+aframe-globe-component@^1.5.2:
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/aframe-globe-component/-/aframe-globe-component-1.5.2.tgz#ae65470204aad93ce41f986ada9adbe17002d785"
+  integrity sha512-BVpFMj4LH28rk/ZuCEIjqvP9lK3TkPPlZV4FQi3/h5T7psH6J9MlkSssSbPltuenXjWfL/djHDj+2p2dI4/Mlw==
   dependencies:
     accessor-fn "^1.3.0"
-    three-globe "^2.14.1"
+    three-globe "^2.14.3"
 
 ansi-styles@^3.2.1:
   version "3.2.1"
@@ -1203,9 +1203,9 @@ earcut@^2.2.2:
   integrity sha512-eZoZPPJcUHnfRZ0PjLvx2qBordSiO8ofC3vt+qACLM95u+4DovnbYNpQtJh0DNsWj8RnxrQytD4WA8gj5cRIaQ==
 
 electron-to-chromium@^1.3.649:
-  version "1.3.650"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.650.tgz#24e821fff2ed61fd71fee092f2a0631b3c0c22a6"
-  integrity sha512-j6pRuNylFBbroG6NB8Lw/Im9oDY74s2zWHBP5TmdYg73cBuL6cz//SMgolVa0gIJk/DSL+kO7baJ1DSXW1FUZg==
+  version "1.3.653"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.653.tgz#1d98400eba330538a7fe169808c6bf9d83c44450"
+  integrity sha512-LehOhcl74u9fkV9Un6WahJ+Xh+0FZLCCDnKYis1Olx1DX2ugRww5PJicE65OG8yznMj8EOQZRcz6FSV1xKxqsA==
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -1260,9 +1260,9 @@ gensync@^1.0.0-beta.1:
   integrity sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==
 
 get-intrinsic@^1.0.2:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/get-intrinsic/-/get-intrinsic-1.1.0.tgz#892e62931e6938c8a23ea5aaebcfb67bd97da97e"
-  integrity sha512-M11rgtQp5GZMZzDL7jLTNxbDfurpzuau5uqRWDPvlHjfvg3TdScAZo96GLvhMjImrmR8uAt0FS2RLoMrfWGKlg==
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/get-intrinsic/-/get-intrinsic-1.1.1.tgz#15f59f376f855c446963948f0d24cd3637b4abc6"
+  integrity sha512-kWZrnVM42QCiEA2Ig1bG8zjoIMOgxWwYCEeNdwY6Tv/cOSeGpcoX4pXHfKUxNKVoArnrEr2e9srnAxxGIraS9Q==
   dependencies:
     function-bind "^1.1.1"
     has "^1.0.3"
@@ -1672,10 +1672,10 @@ three-geojson-geometry@^1.1.2:
     d3-geo "^2.0.1"
     earcut "^2.2.2"
 
-three-globe@^2.14.1:
-  version "2.14.1"
-  resolved "https://registry.yarnpkg.com/three-globe/-/three-globe-2.14.1.tgz#5f5a11035856e0d79c6ab5cbc00f4b00f3df408e"
-  integrity sha512-obC9vF4zxc/QQDqEgh3WhsqTg9khcy4dtbgQ3hdr+UyzDh6VL5AJhP0xcktD5qOWe6T3L43oUp9QLna0BvTY+w==
+three-globe@^2.14.3:
+  version "2.14.3"
+  resolved "https://registry.yarnpkg.com/three-globe/-/three-globe-2.14.3.tgz#a25a7c7495baf1768f9e2f2716b138307ba50aa5"
+  integrity sha512-NkO84GeOEIMkFtN87MjNGjSS8p8XVknULWPUgCR4rtM8pJphzUZAeiNU66iz59M2KSI4+/JF6pPw8ZEMVY4BCA==
   dependencies:
     "@tweenjs/tween.js" "^18.6.4"
     accessor-fn "^1.3.0"
