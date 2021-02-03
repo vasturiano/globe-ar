@@ -27,7 +27,7 @@
       .hexBinResolution(4)
       .hexTopColor(d => weightColor(d.sumWeight))
       .hexSideColor(d => weightColor(d.sumWeight))
-      // .hexBinMerge(true);
+      .hexBinMerge(true);
 
     fetch('../datasets/world_population.csv').then(res => res.text())
       .then(csv => d3.csvParse(csv, ({ lat, lng, pop }) => ({ lat: +lat, lng: +lng, pop: +pop })))
