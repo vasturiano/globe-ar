@@ -24,7 +24,7 @@
       .hexBinPointLat(d => d.geometry.coordinates[1])
       .hexBinPointLng(d => d.geometry.coordinates[0])
       .hexBinPointWeight(d => d.properties.mag)
-      .hexAltitude(({ sumWeight }) => sumWeight * 0.0025)
+      .hexAltitude(({ sumWeight }) => Math.max(0.01, sumWeight * 0.0025))
       .hexTopColor(d => weightColor(d.sumWeight))
       .hexSideColor(d => weightColor(d.sumWeight))
       (document.getElementById('globeViz'));

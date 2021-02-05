@@ -19,6 +19,7 @@
         .hexPolygonsData(countries.features)
         .hexPolygonResolution(3)
         .hexPolygonMargin(0.3)
+        .hexPolygonAltitude(0.03)
         .hexPolygonColor(() => `#${Math.round(Math.random() * Math.pow(2, 24)).toString(16).padStart(6, '0')}`)
         (document.getElementById('globeViz'))
     });

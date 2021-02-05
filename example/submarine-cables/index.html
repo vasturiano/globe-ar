@@ -31,6 +31,7 @@
           .pathPoints('coords')
           .pathPointLat(p => p[1])
           .pathPointLng(p => p[0])
+          .pathPointAlt(0.01)
           .pathColor(path => path.properties.color)
           // .pathStroke(2)
           .pathDashLength(0.1)

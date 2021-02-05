@@ -23,7 +23,7 @@
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
       .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
       .hexBinPointWeight('pop')
-      .hexAltitude(d => d.sumWeight * 6e-8)
+      .hexAltitude(d => d.sumWeight * 6e-8 + 0.01)
       .hexBinResolution(4)
       .hexTopColor(d => weightColor(d.sumWeight))
       .hexSideColor(d => weightColor(d.sumWeight))
