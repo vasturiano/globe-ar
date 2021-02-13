@@ -21,6 +21,7 @@ Check out the examples:
 * [Arc Links](https://vasturiano.github.io/globe-ar/example/random-arcs/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/random-arcs/index.html))
 * [Choropleth](https://vasturiano.github.io/globe-ar/example/choropleth-countries/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/choropleth-countries/index.html))
 * [Elevated Polygons](https://vasturiano.github.io/globe-ar/example/countries-population/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/countries-population/index.html))
+* [Hollow Globe](https://vasturiano.github.io/globe-ar/example/hollow-globe/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/hollow-globe/index.html))
 * [Path Lines](https://vasturiano.github.io/globe-ar/example/random-paths/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/random-paths/index.html))
 * [Map Labels](https://vasturiano.github.io/globe-ar/example/world-cities/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/world-cities/index.html))
 * [Hexed Country Polygons](https://vasturiano.github.io/globe-ar/example/hexed-polygons/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/hexed-polygons/index.html))
