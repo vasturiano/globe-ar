@@ -918,14 +918,14 @@ accessor-fn@^1.3.0:
   resolved "https://registry.yarnpkg.com/accessor-fn/-/accessor-fn-1.3.0.tgz#52cfc21ff5633a12177f757ec1e4c4fbb361bb02"
   integrity sha512-NC5BYjrfBonksWxXrZ1WsPnh70sTQC2Uas9IL0RHQN5OETP4dO/bviPxZ7zTOahhRQ7o6avJg3ImJvRbuyHASg==
 
-aframe-globe-component@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/aframe-globe-component/-/aframe-globe-component-1.7.0.tgz#adae2028b2710a4bc7e1a39068de28b137585fc3"
-  integrity sha512-6+LrNWMWA0aSs8LREB29AaQJzzxEAtFOk1DbCoTkczWyOaFykj/sWQ/yGzofw4L0I7Xo6aUGivFjdc/p0Dx7KQ==
+aframe-globe-component@^1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/aframe-globe-component/-/aframe-globe-component-1.7.2.tgz#78298e001f14b09d2ef12f0755bfd8073549e4a8"
+  integrity sha512-CtKhb/VLII4pmXdrFOF0jvFykLEzu6lZ51XKPvI1W/Vkr1JGMbV1seQo9QuM8YDzqX3Wn+CXL0QuQUiLyuXQCA==
   dependencies:
     accessor-fn "^1.3.0"
     three ">=0.88.0"
-    three-globe "^2.16.1"
+    three-globe "^2.16.3"
 
 ansi-styles@^3.2.1:
   version "3.2.1"
@@ -1722,10 +1722,10 @@ three-geojson-geometry@^1.1.2:
     d3-geo "^2.0.1"
     earcut "^2.2.2"
 
-three-globe@^2.16.1:
-  version "2.16.1"
-  resolved "https://registry.yarnpkg.com/three-globe/-/three-globe-2.16.1.tgz#13484ddc90616e342192a6b309c81be4e4acf80b"
-  integrity sha512-A4xCmwHJ8cfGE86bHFufoFgv0263OM08QlFO0Y/3DTmgCeUz29eqQeyd9dkDN7jIjnnIrkQkTovFexHyOddwNg==
+three-globe@^2.16.3:
+  version "2.16.3"
+  resolved "https://registry.yarnpkg.com/three-globe/-/three-globe-2.16.3.tgz#f3535c42f46e84da530a84f458638a891ad1ecd3"
+  integrity sha512-VeVAhox8EuTPFVxXdHSjwsLRPqYOvYhZDGZH5mI3VhIIPZXO9zglictsq8gu5ZtT5mHK8qpFs90DMfspcPW0ow==
   dependencies:
     "@tweenjs/tween.js" "^18.6.4"
     accessor-fn "^1.3.0"
