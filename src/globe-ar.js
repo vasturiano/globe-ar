@@ -16,7 +16,8 @@ export default Kapsule({
     yOffset: { default: 1.5 }, // marker size units
     globeScale: { default: 1 }, // globe radius units per marker width
 
-    onCenterHover: {},
+    onHover: {},
+    onClick: {},
     globeImageUrl: {},
     bumpImageUrl: {},
     showGlobe: { default: true },
@@ -168,6 +169,12 @@ export default Kapsule({
     Object.entries(markerAttrs).forEach(([attr, val]) => arMarker.setAttribute(attr, val));
     scene.appendChild(arMarker);
 
+    // Setup raycaster cursor
+    let mouseCursor;
+    scene.appendChild(mouseCursor = document.createElement('a-entity'));
+    mouseCursor.setAttribute('cursor' /*, 'rayOrigin: mouse'*/); // mouse raycaster has accuracy issues in ar.js: https://github.com/AR-js-org/AR.js/issues/40
+    mouseCursor.setAttribute('raycaster', 'objects: [globe]; interval: 100');
+
     // Add globe entity
     state.globe = document.createElement('a-entity');
     state.globe.setAttribute('globe', null);
@@ -193,7 +200,8 @@ export default Kapsule({
     state.globe.setAttribute('position', `0 ${state.yOffset} 0`);
 
     const passThroughProps = [
-      'onCenterHover',
+      'onHover',
+      'onClick',
       'globeImageUrl',
       'bumpImageUrl',
       'showGlobe',
@@ -301,7 +309,7 @@ export default Kapsule({
 
     const newProps = Object.assign({},
       ...Object.entries(state)
-        .filter(([prop, val]) => changedProps.hasOwnProperty(prop) && passThroughProps.indexOf(prop) != -1 && val !== undefined && val !== null)
+        .filter(([prop, val]) => changedProps.hasOwnProperty(prop) && passThroughProps.indexOf(prop) !== -1 && val !== undefined && val !== null)
         .map(([key, val]) => ({ [key]: val }))
     );
 

@@ -81,7 +81,6 @@ GlobeAR({ configOptions })(<domElement>)
 | <b>globeScale</b>([<i>number</i>]) | Getter/setter for the translation scale between real world distances and globe radius units, determining the overall size of the globe. Defined in terms of how many globe radii fit in a full marker width. | 1 |
 | <b>width</b>([<i>px</i>]) | Getter/setter for the viewport canvas width. | *&lt;window width&gt;* |
 | <b>height</b>([<i>px</i>]) | Getter/setter for the viewport canvas height. | *&lt;window height&gt;* |
-| <b>onCenterHover</b> | Callback function for globe item's hover events at the center of the viewport. The item's data and object type (or `null` if there's no object under the central line of sight) is included as the first argument, and the previous item (or null) as second argument. | - |
 
 ### Globe Layer
 
@@ -236,6 +235,13 @@ GlobeAR({ configOptions })(<domElement>)
 | <b>customLayerData</b>([<i>array</i>]) | Getter/setter for the list of items to represent in the custom map layer. Each item is rendered according to the `customThreeObject` method. | `[]` |
 | <b>customThreeObject</b>([<i>Object3d</i>, <i>str</i> or <i>fn</i>]) | Object accessor function or attribute for generating a custom 3d object to render as part of the custom map layer. Should return an instance of [ThreeJS Object3d](https://threejs.org/docs/index.html#api/core/Object3D). The callback method's signature includes the object's data as well as the globe radius: `customThreeObject((objData, globeRadius) => { ... })`. | `null` |
 | <b>customThreeObjectUpdate</b>([<i>str</i> or <i>fn</i>]) | Object accessor function or attribute for updating an existing custom 3d object with new data. This can be used for performance improvement on data updates as the objects don't need to be removed and recreated at each update. The callback method's signature includes the object to be update, its new data and the globe radius: `customThreeObjectUpdate((obj, objData, globeRadius) => { ... })`. | `null` |
+
+### Interaction
+
+| Method | Description | Default |
+| --- | --- | :--: |
+| <b>onHover</b> | Callback function for globe item's hover events. The item's data and object type (or `null` if there's no object under the pointer line of sight) is included as the first argument, and the previous item (or null) as second argument. | - |
+| <b>onClick</b> | Callback function for globe item's click events. The object's data and type is included as sole argument. | - |
 
 ### Utility
 

@@ -32,7 +32,7 @@
         .polygonSideColor(() => 'rgba(0, 100, 0, 0.15)')
         .polygonStrokeColor(() => '#111')
         .polygonsTransitionDuration(300)
-        .onCenterHover(hoverObj => {
+        .onHover(hoverObj => {
           world
             .polygonAltitude(d => (hoverObj && d === hoverObj.data) ? 0.12 : 0.06)
             .polygonCapColor(d => (hoverObj && d === hoverObj.data) ? 'steelblue' : colorScale(getVal(d)));

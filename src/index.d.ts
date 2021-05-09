@@ -25,7 +25,8 @@ export interface GlobeGenericInstance<ChainableInstance> extends ThreeGlobeGener
   globeScale(globeRadii: number): ChainableInstance;
 
   // Interaction events
-  onCenterHover(callback: (obj: hoverObj | null, prevObj: hoverObj | null) => void): ChainableInstance;
+  onHover(callback: (obj: hoverObj | null, prevObj: hoverObj | null) => void): ChainableInstance;
+  onClick(callback: (obj: hoverObj) => void): ChainableInstance;
 }
 
 export type GlobeInstance = GlobeGenericInstance<GlobeInstance>;
