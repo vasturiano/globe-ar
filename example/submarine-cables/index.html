@@ -18,7 +18,7 @@
       (document.getElementById('globeViz'));
 
     // from https://github.com/telegeography/www.submarinecablemap.com
-    fetch('//raw.githubusercontent.com/telegeography/www.submarinecablemap.com/master/public/api/v2/cable/cable-geo.json')
+    fetch('//raw.githubusercontent.com/telegeography/www.submarinecablemap.com/master/web/public/api/v3/cable/cable-geo.json')
       .then(r =>r.json())
       .then(cablesGeo => {
         let cablePaths = [];
