@@ -1,0 +1,27 @@
+<head>
+  <style> body { margin: 0; } </style>
+
+  <script src="//unpkg.com/aframe"></script>
+  <script src="//unpkg.com/ar.js/aframe/build/aframe-ar.min.js"></script>
+
+  <script src="//unpkg.com/globe-ar"></script>
+<!--  <script src="../../dist/globe-ar.js"></script>-->
+</head>
+
+<body>
+  <div id="globeViz"></div>
+
+  <script>
+    const shieldRing = { lat: 90, lng: 0 };
+
+    GlobeAR()
+      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+      .ringsData([shieldRing])
+      .ringAltitude(0.25)
+      .ringColor(() => 'lightblue')
+      .ringMaxRadius(180)
+      .ringPropagationSpeed(20)
+      .ringRepeatPeriod(200)
+      (document.getElementById('globeViz'))
+  </script>
+</body>

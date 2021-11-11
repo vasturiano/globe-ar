@@ -103,7 +103,16 @@ export default Kapsule({
     tileUseGlobeProjection: { default: true }, // whether to size tiles relative to the globe coordinate system, or independently
     tileMaterial: {},
     tileCurvatureResolution: { default: 5 }, // in angular degrees
-    tilesTransitionDuration: { default: 1000, triggerUpdate: false }, // ms
+    tilesTransitionDuration: { default: 1000 }, // ms
+    ringsData: { default: [] },
+    ringLat: { default: 'lat' },
+    ringLng: { default: 'lng' },
+    ringAltitude: { default: 1.5e-3 },
+    ringColor: { default: () => '#ffffaa' }, // single color, array of colors or color interpolation fn
+    ringResolution: { default: 64 }, // how many slice segments in each circle's circumference
+    ringMaxRadius: { default: 2 }, // degrees
+    ringPropagationSpeed: { default: 1 }, // degrees/s
+    ringRepeatPeriod: { default: 700 }, // ms
     labelsData: { default: [] },
     labelLat: { default: 'lat' },
     labelLng: { default: 'lng' },
@@ -120,7 +129,7 @@ export default Kapsule({
     labelsTransitionDuration: { default: 1000 }, // ms
     customLayerData: { default: [] },
     customThreeObject: {},
-    customThreeObjectUpdate: { triggerUpdate: false }
+    customThreeObjectUpdate: {}
   },
 
   methods: {
@@ -288,6 +297,15 @@ export default Kapsule({
       'tileMaterial',
       'tileCurvatureResolution',
       'tilesTransitionDuration',
+      'ringsData',
+      'ringLat',
+      'ringLng',
+      'ringAltitude',
+      'ringColor',
+      'ringResolution',
+      'ringMaxRadius',
+      'ringPropagationSpeed',
+      'ringRepeatPeriod',
       'labelsData',
       'labelLat',
       'labelLng',
