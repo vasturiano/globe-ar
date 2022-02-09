@@ -3,6 +3,7 @@ Globe-AR
 
 [![NPM package][npm-img]][npm-url]
 [![Build Size][build-size-img]][build-size-url]
+[![NPM Downloads][npm-downloads-img]][npm-downloads-url]
 
 <p align="center">
   <a href="https://vasturiano.github.io/globe-ar/example/world-population/"><img width="80%" src="https://vasturiano.github.io/globe-ar/example/world-population/preview.jpg"></a>
@@ -269,7 +270,9 @@ GlobeAR({ configOptions })(<domElement>)
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=L398E7PKP47E8&currency_code=USD&source=url) If this project has helped you and you'd like to contribute back, you can always [buy me a ☕](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=L398E7PKP47E8&currency_code=USD&source=url)!
 
-[npm-img]: https://img.shields.io/npm/v/globe-ar.svg
+[npm-img]: https://img.shields.io/npm/v/globe-ar
 [npm-url]: https://npmjs.org/package/globe-ar
-[build-size-img]: https://img.shields.io/bundlephobia/minzip/globe-ar.svg
+[build-size-img]: https://img.shields.io/bundlephobia/minzip/globe-ar
 [build-size-url]: https://bundlephobia.com/result?p=globe-ar
+[npm-downloads-img]: https://img.shields.io/npm/dt/globe-ar
+[npm-downloads-url]: https://www.npmtrends.com/globe-ar
