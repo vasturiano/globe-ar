@@ -10,10 +10,10 @@ Globe-AR
 </p>
 
 A web component to represent geospatial data in augmented reality using a spherical projection 3D globe.
-Uses [AR.js](https://github.com/jeromeetienne/AR.js) with [A-Frame](https://aframe.io/) for rendering, and [three-globe](https://github.com/vasturiano/three-globe) to manage the underlying globe object.
+Uses [AR.js](https://github.com/AR-js-org/AR.js) with [A-Frame](https://aframe.io/) for rendering, and [three-globe](https://github.com/vasturiano/three-globe) to manage the underlying globe object.
 
 To load any of the examples below:
-* Open this [hiro marker image](https://jeromeetienne.github.io/AR.js/data/images/HIRO.jpg) in your desktop browser.
+* Open this [hiro marker image](https://ar-js-org.github.io/AR.js/data/images/HIRO.jpg) in your desktop browser.
 * Open the example on your phone browser, and point it at your desktop screen.
 
 Check out the examples:
@@ -60,8 +60,8 @@ myGlobe(<myDOMElement>)
 
 Make sure to load these two script tags in your application, required for `AR.js` + `A-frame` to function properly:
 ```
-<script src="//aframe.io/releases/1.0.0/aframe.min.js"></script>
-<script src="//unpkg.com/ar.js/aframe/build/aframe-ar.min.js"></script>
+<script src="//unpkg.com/aframe"></script>
+<script src="//unpkg.com/@ar-js-org/ar.js"></script>
 ```
 
 ## API reference
@@ -73,7 +73,7 @@ GlobeAR({ configOptions })(<domElement>)
 
 | Config options | Description | Default |
 | --- | --- | :--: |
-| <b>markerAttrs</b>: <i>object</i> | Set of attributes that define the marker where the globe is mounted, according to the [a-marker specification](https://github.com/jeromeetienne/AR.js/tree/master/aframe#a-marker). | `{ preset: 'hiro' }` |
+| <b>markerAttrs</b>: <i>object</i> | Set of attributes that define the marker where the globe is mounted, according to the [a-marker specification](https://ar-js-org.github.io/AR.js-Docs/marker-based/). | `{ preset: 'hiro' }` |
 
 ### Container layout
 

@@ -5,7 +5,7 @@
   <script src="//unpkg.com/topojson-client"></script>
 
   <script src="//unpkg.com/aframe"></script>
-  <script src="//unpkg.com/ar.js/aframe/build/aframe-ar.min.js"></script>
+  <script src="//unpkg.com/@ar-js-org/ar.js"></script>
 
   <script src="//unpkg.com/globe-ar"></script>
 <!--  <script src="../../dist/globe-ar.js"></script>-->
@@ -25,7 +25,8 @@
         world
           .polygonsData(topojson.feature(landTopo, landTopo.objects.land).features)
           .polygonCapMaterial(new THREE.MeshLambertMaterial({ color: 'darkslategrey', side: THREE.DoubleSide }))
-          .polygonSideColor(() => 'rgba(0,0,0,0)');
+          .polygonSideColor(() => 'rgba(0,0,0,0)')
+          .polygonStrokeColor(() => 'transparent');
       });
   </script>
 </body>
