@@ -39,19 +39,19 @@ See also the [WebGL 3D version](https://github.com/vasturiano/globe.gl), and the
 
 ## Quick start
 
-```
+```js
 import GlobeAR from 'globe-ar';
 ```
 or
-```
+```js
 const GlobeAR = require('globe-ar');
 ```
 or even
-```
+```html
 <script src="//unpkg.com/globe-ar"></script>
 ```
 then
-```
+```js
 const myGlobe = GlobeAR();
 myGlobe(<myDOMElement>)
   .globeImageUrl(<imageUrl>)
@@ -59,7 +59,7 @@ myGlobe(<myDOMElement>)
 ```
 
 Make sure to load these two script tags in your application, required for `AR.js` + `A-frame` to function properly:
-```
+```html
 <script src="//unpkg.com/aframe"></script>
 <script src="//unpkg.com/@ar-js-org/ar.js"></script>
 ```
@@ -67,7 +67,7 @@ Make sure to load these two script tags in your application, required for `AR.js
 ## API reference
 
 ### Initialisation
-```
+```js
 GlobeAR({ configOptions })(<domElement>)
 ```
 
