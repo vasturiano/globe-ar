@@ -1,6 +1,6 @@
 {
   "name": "globe-ar",
-  "version": "1.11.3",
+  "version": "1.11.4",
   "description": "UI component for Globe Data Visualization in AR",
   "license": "MIT",
   "unpkg": "dist/globe-ar.min.js",
