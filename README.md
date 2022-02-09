@@ -3,7 +3,6 @@ Globe-AR
 
 [![NPM package][npm-img]][npm-url]
 [![Build Size][build-size-img]][build-size-url]
-[![Dependencies][dependencies-img]][dependencies-url]
 
 <p align="center">
   <a href="https://vasturiano.github.io/globe-ar/example/world-population/"><img width="80%" src="https://vasturiano.github.io/globe-ar/example/world-population/preview.jpg"></a>
@@ -274,5 +273,3 @@ GlobeAR({ configOptions })(<domElement>)
 [npm-url]: https://npmjs.org/package/globe-ar
 [build-size-img]: https://img.shields.io/bundlephobia/minzip/globe-ar.svg
 [build-size-url]: https://bundlephobia.com/result?p=globe-ar
-[dependencies-img]: https://img.shields.io/david/vasturiano/globe-ar.svg
-[dependencies-url]: https://david-dm.org/vasturiano/globe-ar
