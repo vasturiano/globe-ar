@@ -12,6 +12,8 @@ Globe-AR
 A web component to represent geospatial data in augmented reality using a spherical projection 3D globe.
 Uses [AR.js](https://github.com/AR-js-org/AR.js) with [A-Frame](https://aframe.io/) for rendering, and [three-globe](https://github.com/vasturiano/three-globe) to manage the underlying globe object.
 
+See also the [WebGL 3D version](https://github.com/vasturiano/globe.gl), and the [A-Frame component version (aframe-globe-component)](https://github.com/vasturiano/aframe-globe-component).
+
 To load any of the examples below:
 * Open this [hiro marker image](https://ar-js-org.github.io/AR.js/data/images/HIRO.jpg) in your desktop browser.
 * Open the example on your phone browser, and point it at your desktop screen.
@@ -34,8 +36,6 @@ Check out the examples:
 * [US outbound international airline routes](https://vasturiano.github.io/globe-ar/example/airline-routes/us-international-outbound.html) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/airline-routes/us-international-outbound.html))
 * [Earth Shield](https://vasturiano.github.io/globe-ar/example/earth-shield/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/earth-shield/index.html))
 * [Submarine Cables](https://vasturiano.github.io/globe-ar/example/submarine-cables/index.html) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/submarine-cables/index.html))
-
-See also the [WebGL 3D version](https://github.com/vasturiano/globe.gl), and the [A-Frame component version (aframe-globe-component)](https://github.com/vasturiano/aframe-globe-component).
 
 ## Quick start
 
