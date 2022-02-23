@@ -127,6 +127,11 @@ export default Kapsule({
     labelDotRadius: { default: 0.1 }, // in deg
     labelDotOrientation: { default: () => 'bottom' }, // right, top, bottom
     labelsTransitionDuration: { default: 1000 }, // ms
+    objectsData: { default: [] },
+    objectLat: { default: 'lat' },
+    objectLng: { default: 'lng' },
+    objectAltitude: { default: 0.01 }, // in units of globe radius
+    objectThreeObject: {},
     customLayerData: { default: [] },
     customThreeObject: {},
     customThreeObjectUpdate: {}
@@ -136,6 +141,7 @@ export default Kapsule({
     // pass-through methods
     ...Object.assign({}, ...[
       'globeMaterial',
+      'getGlobeRadius',
       'getCoords',
       'toGeoCoords'
     ].map(method => ({
@@ -157,6 +163,7 @@ export default Kapsule({
       this.hexPolygonsData([]);
       this.tilesData([]);
       this.labelsData([]);
+      this.objectsData([]);
       this.customLayerData([]);
     }
   },
@@ -320,6 +327,11 @@ export default Kapsule({
       'labelDotRadius',
       'labelDotOrientation',
       'labelsTransitionDuration',
+      'objectsData',
+      'objectLat',
+      'objectLng',
+      'objectAltitude',
+      'objectThreeObject',
       'customLayerData',
       'customThreeObject',
       'customThreeObjectUpdate'

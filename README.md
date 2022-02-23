@@ -35,6 +35,7 @@ Check out the examples:
 * [World Volcanoes](https://vasturiano.github.io/globe-ar/example/volcanoes/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/volcanoes/index.html))
 * [US outbound international airline routes](https://vasturiano.github.io/globe-ar/example/airline-routes/us-international-outbound.html) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/airline-routes/us-international-outbound.html))
 * [Earth Shield](https://vasturiano.github.io/globe-ar/example/earth-shield/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/earth-shield/index.html))
+* [Satellites](https://vasturiano.github.io/globe-ar/example/satellites/index.html) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/satellites/index.html))
 * [Submarine Cables](https://vasturiano.github.io/globe-ar/example/submarine-cables/index.html) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/submarine-cables/index.html))
 
 ## Quick start
@@ -244,13 +245,23 @@ GlobeAR({ configOptions })(<domElement>)
 | <b>labelDotOrientation</b>([<i>str</i> or <i>fn</i>]) | Label object accessor function or attribute for the orientation of the label if the dot marker is present. Possible values are `right`, `top` and `bottom`. | `() => 'bottom'` |
 | <b>labelsTransitionDuration</b>([<i>num</i>]) | Getter/setter for duration (ms) of the transition to animate label changes involving position modifications (`lat`, `lng`, `altitude`, `rotation`). A value of `0` will move the labels immediately to their final position. New labels are animated by scaling their size. | 1000 |
 
+### Objects Layer
+
+| Method | Description | Default |
+| --- | --- | :--: |
+| <b>objectsData</b>([<i>array</i>]) | Getter/setter for the list of custom 3D objects to represent in the objects layer. Each object is rendered according to the `objectThreeObject` method. | `[]` |
+| <b>objectLat</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Object accessor function, attribute or a numeric constant for the latitude coordinate of the object's position. | `lat` |
+| <b>objectLng</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Object accessor function, attribute or a numeric constant for the longitude coordinate of the object's position. | `lng` |
+| <b>objectAltitude</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Object accessor function, attribute or a numeric constant for the altitude coordinate of the object's position, in terms of globe radius units. | 0.01 |
+| <b>objectThreeObject</b>([<i>Object3d</i>, <i>str</i> or <i>fn</i>]) | Object accessor function or attribute for defining a custom 3d object to render as part of the objects map layer. Should return an instance of [ThreeJS Object3d](https://threejs.org/docs/index.html#api/core/Object3D). | *A yellow sphere* |
+
 ### Custom Layer
 
 | Method | Description | Default |
 | --- | --- | :--: |
 | <b>customLayerData</b>([<i>array</i>]) | Getter/setter for the list of items to represent in the custom map layer. Each item is rendered according to the `customThreeObject` method. | `[]` |
-| <b>customThreeObject</b>([<i>Object3d</i>, <i>str</i> or <i>fn</i>]) | Object accessor function or attribute for generating a custom 3d object to render as part of the custom map layer. Should return an instance of [ThreeJS Object3d](https://threejs.org/docs/index.html#api/core/Object3D). The callback method's signature includes the object's data as well as the globe radius: `customThreeObject((objData, globeRadius) => { ... })`. | `null` |
-| <b>customThreeObjectUpdate</b>([<i>str</i> or <i>fn</i>]) | Object accessor function or attribute for updating an existing custom 3d object with new data. This can be used for performance improvement on data updates as the objects don't need to be removed and recreated at each update. The callback method's signature includes the object to be update, its new data and the globe radius: `customThreeObjectUpdate((obj, objData, globeRadius) => { ... })`. | `null` |
+| <b>customThreeObject</b>([<i>Object3d</i>, <i>str</i> or <i>fn</i>]) | Object accessor function or attribute for generating a custom 3d object to render as part of the custom map layer. Should return an instance of [ThreeJS Object3d](https://threejs.org/docs/index.html#api/core/Object3D). | `null` |
+| <b>customThreeObjectUpdate</b>([<i>str</i> or <i>fn</i>]) | Object accessor function or attribute for updating an existing custom 3d object with new data. This can be used for performance improvement on data updates as the objects don't need to be removed and recreated at each update. The callback method's signature includes the object to be update and its new data: `customThreeObjectUpdate((obj, objData) => { ... })`. | `null` |
 
 ### Interaction
 
@@ -263,6 +274,7 @@ GlobeAR({ configOptions })(<domElement>)
 
 | Method | Description |
 | --- | --- |
+| <b>getGlobeRadius</b>() | Returns the cartesian distance of a globe radius in absolute spatial units. |
 | <b>getCoords</b>(<i>lat</i>, <i>lng</i> [,<i>altitude</i>]) | Utility method to translate spherical coordinates. Given a pair of latitude/longitude coordinates and optionally altitude (in terms of globe radius units), returns the equivalent `{x, y, z}` cartesian spatial coordinates. ||
 | <b>toGeoCoords</b>({ <i>x</i>, <i>y</i>, <i>z</i> }) | Utility method to translate cartesian coordinates to the geographic domain. Given a set of 3D cartesian coordinates `{x, y, z}`, returns the equivalent `{lat, lng, altitude}` spherical coordinates. Altitude is defined in terms of globe radius units. ||
 
