@@ -922,9 +922,9 @@
     "@rollup/pluginutils" "^3.1.0"
 
 "@rollup/plugin-commonjs@^21.0.1":
-  version "21.0.1"
-  resolved "https://registry.yarnpkg.com/@rollup/plugin-commonjs/-/plugin-commonjs-21.0.1.tgz#1e57c81ae1518e4df0954d681c642e7d94588fee"
-  integrity sha512-EA+g22lbNJ8p5kuZJUYyhhDK7WgJckW5g4pNN7n4mAFUM96VuwUnNT3xr2Db2iCZPI1pJPbGyfT5mS9T1dHfMg==
+  version "21.0.2"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-commonjs/-/plugin-commonjs-21.0.2.tgz#0b9c539aa1837c94abfaf87945838b0fc8564891"
+  integrity sha512-d/OmjaLVO4j/aQX69bwpWPpbvI3TJkQuxoAk7BH8ew1PyoMBLTOuvJTjzG8oEoW7drIIqB0KCJtfFLu/2GClWg==
   dependencies:
     "@rollup/pluginutils" "^3.1.0"
     commondir "^1.0.1"
@@ -991,9 +991,9 @@
   integrity sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==
 
 "@types/node@*":
-  version "17.0.19"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.19.tgz#726171367f404bfbe8512ba608a09ebad810c7e6"
-  integrity sha512-PfeQhvcMR4cPFVuYfBN4ifG7p9c+Dlh3yUZR6k+5yQK7wX3gDgVxBly4/WkBRs9x4dmcy1TVl08SY67wwtEvmA==
+  version "17.0.21"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.21.tgz#864b987c0c68d07b4345845c3e63b75edd143644"
+  integrity sha512-DBZCJbhII3r90XbQxI8Y9IjjiiOGlZ0Hr32omXIZvwwZ7p4DMMXGrKXVyPfuoBOri9XNtL0UK69jYIBIsRX3QQ==
 
 "@types/resolve@1.17.1":
   version "1.17.1"
@@ -1013,9 +1013,9 @@ acorn@^8.5.0:
   integrity sha512-V/LGr1APy+PXIwKebEWrkZPwoeoF+w1jiOBUmuxuiUIaOHtob8Qc9BTrYo7VuI5fR8tqsy+buA2WFooR5olqvQ==
 
 aframe-globe-component@^1.12:
-  version "1.12.0"
-  resolved "https://registry.yarnpkg.com/aframe-globe-component/-/aframe-globe-component-1.12.0.tgz#1cee1850d81d5e8801b89d8a08e992c06b904d55"
-  integrity sha512-IA52ieGvqMhbGrb/49l2Gjmhl4osyvPmtflrPZkQtjDJ9MkOynhsFUel/sgKracdxPTPNisNnWIzjsjLspCC3g==
+  version "1.12.2"
+  resolved "https://registry.yarnpkg.com/aframe-globe-component/-/aframe-globe-component-1.12.2.tgz#52c91c3fcfbcc844efa93abcb49be2d3cfac3a24"
+  integrity sha512-UYeKtBBxZDbrWt40bpLSZgKrnAx9dl3GHREwTY+l+GwsW88bhI2CXSJFfMROCHrpx0ObM1y0+GpxBbjIGGO0eg==
   dependencies:
     accessor-fn "1"
     three ">=0.88.0"
@@ -1282,9 +1282,9 @@ earcut@2:
   integrity sha512-iRDI1QeCQIhMCZk48DRDMVgQSSBDmbzzNhnxIo+pwx3swkfjMh6vh0nWLq1NdvGHLKH6wIrAM3vQWeTj6qeoug==
 
 electron-to-chromium@^1.4.71:
-  version "1.4.71"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.71.tgz#17056914465da0890ce00351a3b946fd4cd51ff6"
-  integrity sha512-Hk61vXXKRb2cd3znPE9F+2pLWdIOmP7GjiTj45y6L3W/lO+hSnUSUhq+6lEaERWBdZOHbk2s3YV5c9xVl3boVw==
+  version "1.4.73"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.73.tgz#422f6f514315bcace9615903e4a9b6b9fa283137"
+  integrity sha512-RlCffXkE/LliqfA5m29+dVDPB2r72y2D2egMMfIy3Le8ODrxjuZNVo4NIC2yPL01N4xb4nZQLwzi6Z5tGIGLnA==
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -1770,9 +1770,9 @@ three-geojson-geometry@^1.1:
     earcut "2"
 
 three-globe@^2.23:
-  version "2.23.2"
-  resolved "https://registry.yarnpkg.com/three-globe/-/three-globe-2.23.2.tgz#40af51b441154f45f9d55c50abf09bd8ba286cc9"
-  integrity sha512-t9MuVtA32EhIL/ZYtGTxxfYsC23ayVmJppiYFWWUK2iqfV55qUcjORMC65Ef9VY4CIns1UhRQs0xuuQohEhzYg==
+  version "2.23.4"
+  resolved "https://registry.yarnpkg.com/three-globe/-/three-globe-2.23.4.tgz#d62c296e5752393352219fca7d3ce1ec71c91d7d"
+  integrity sha512-I5yZIgPqMfcz129wGk1/PDYhWcrxJq4txd/FwYyHHeCqMncxDxH+U+e9O+QymrkApOxP4i8QjGdYoJFfEFbIBQ==
   dependencies:
     "@tweenjs/tween.js" "18"
     accessor-fn "1"
@@ -1791,9 +1791,9 @@ three-globe@^2.23:
     tinycolor2 "^1.4"
 
 three@>=0.88.0:
-  version "0.137.5"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.137.5.tgz#a1e34bedd0412f2d8797112973dfadac78022ce6"
-  integrity sha512-rTyr+HDFxjnN8+N/guZjDgfVxgHptZQpf6xfL/Mo7a5JYIFwK6tAq3bzxYYB4Ae0RosDZlDuP+X5aXDXz+XnHQ==
+  version "0.138.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.138.0.tgz#cd0cbeb621a5826c65e49e06705d0bb9f6c13ca6"
+  integrity sha512-xM/WwUd53ClkbHFrftW29aIzMVvyhj4rSZmIVgn6hZ/kYB7aMjDD8FFy4VJamygXSrldJuOgEJuaI+E+8mt/KA==
 
 tinycolor2@^1.4:
   version "1.4.2"
