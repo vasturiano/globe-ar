@@ -18,7 +18,7 @@ To load any of the examples below:
 * Open this [hiro marker image](https://ar-js-org.github.io/AR.js/data/images/HIRO.jpg) in your desktop browser.
 * Open the example on your phone browser, and point it at your desktop screen.
 
-Check out the examples:
+#### Check out the examples:
 * [Basic](https://vasturiano.github.io/globe-ar/example/basic/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/basic/index.html))
 * [Arc Links](https://vasturiano.github.io/globe-ar/example/random-arcs/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/random-arcs/index.html))
 * [Choropleth](https://vasturiano.github.io/globe-ar/example/choropleth-countries/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/choropleth-countries/index.html))
@@ -67,6 +67,24 @@ Make sure to load these two script tags in your application, required for `AR.js
 
 ## API reference
 
+* [Initialisation](#initialisation)
+* [Container Layout](#container-layout)
+* [Globe Layer](#globe-layer)
+* [Points Layer](#points-layer)
+* [Arcs Layer](#arcs-layer)
+* [Polygons Layer](#polygons-layer)
+* [Paths Layer](#paths-layer)
+* [Hex Bin Layer](#hex-bin-layer)
+* [Hexed Polygons Layer](#hexed-polygons-layer)
+* [Tiles Layer](#tiles-layer)
+* [Rings Layer](#rings-layer)
+* [Labels Layer](#labels-layer)
+* [HTML Elements Layer](#html-elements-layer)
+* [3D Objects Layer](#3d-objects-layer)
+* [Custom Layer](#custom-layer)
+* [Interaction](#interaction)
+* [Utility](#utility)
+
 ### Initialisation
 ```js
 GlobeAR({ configOptions })(<domElement>)
@@ -76,7 +94,7 @@ GlobeAR({ configOptions })(<domElement>)
 | --- | --- | :--: |
 | <b>markerAttrs</b>: <i>object</i> | Set of attributes that define the marker where the globe is mounted, according to the [a-marker specification](https://ar-js-org.github.io/AR.js-Docs/marker-based/). | `{ preset: 'hiro' }` |
 
-### Container layout
+### Container Layout
 
 | Method | Description | Default |
 | --- | --- | :--: |
@@ -245,7 +263,7 @@ GlobeAR({ configOptions })(<domElement>)
 | <b>labelDotOrientation</b>([<i>str</i> or <i>fn</i>]) | Label object accessor function or attribute for the orientation of the label if the dot marker is present. Possible values are `right`, `top` and `bottom`. | `() => 'bottom'` |
 | <b>labelsTransitionDuration</b>([<i>num</i>]) | Getter/setter for duration (ms) of the transition to animate label changes involving position modifications (`lat`, `lng`, `altitude`, `rotation`). A value of `0` will move the labels immediately to their final position. New labels are animated by scaling their size. | 1000 |
 
-### Objects Layer
+### 3D Objects Layer
 
 | Method | Description | Default |
 | --- | --- | :--: |
