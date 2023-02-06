@@ -43,7 +43,7 @@ To load any of the examples below:
 ```js
 import GlobeAR from 'globe-ar';
 ```
-or using a script tag
+or using a *script* tag
 ```html
 <script src="//unpkg.com/globe-ar"></script>
 ```
