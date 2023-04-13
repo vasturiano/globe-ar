@@ -17,9 +17,9 @@
       .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
       (document.getElementById('globeViz'));
 
-    // from https://github.com/telegeography/www.submarinecablemap.com
-    fetch('//raw.githubusercontent.com/telegeography/www.submarinecablemap.com/master/web/public/api/v3/cable/cable-geo.json')
-      .then(r =>r.json())
+    // from https://www.submarinecablemap.com
+    fetch('//http-proxy.vastur.com?url=https://www.submarinecablemap.com/api/v3/cable/cable-geo.json')
+      .then(r => r.json())
       .then(cablesGeo => {
         let cablePaths = [];
         cablesGeo.features.forEach(({ geometry, properties }) => {
