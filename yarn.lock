@@ -1050,7 +1050,7 @@ acorn@^8.5.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.2.tgz#1b2f25db02af965399b9776b0c2c391276d37c4a"
   integrity sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==
 
-aframe-globe-component@^1.12:
+aframe-globe-component@1:
   version "1.12.7"
   resolved "https://registry.yarnpkg.com/aframe-globe-component/-/aframe-globe-component-1.12.7.tgz#236bbb9feebf89ca3abadd8c9843713c6cb31ab2"
   integrity sha512-VCDcgUicN6mrMoBylO6N22upJpRMo4aXuh3bJX96sWs0MPrUef3TSzw5aj9smfAoKDaIhjIXsUkvPRxHc4p7lQ==
@@ -1446,7 +1446,7 @@ json5@^2.2.2:
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
   integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
-kapsule@^1.14:
+kapsule@1, kapsule@^1.14:
   version "1.14.2"
   resolved "https://registry.yarnpkg.com/kapsule/-/kapsule-1.14.2.tgz#07528c2e83b16ec6152d35897b9eb82ce9e5bce6"
   integrity sha512-6ROjWt7DHJ6pBv8RqpcP5uhP7+IgoaF5XavzcRU0U1/5wT/dZgBDNPrdZMNXaWyWLZvAdJ/ONuVRW0Dr9NbLkA==

@@ -43,8 +43,8 @@
     "dist/**/*"
   ],
   "dependencies": {
-    "aframe-globe-component": "^1.12",
-    "kapsule": "^1.14"
+    "aframe-globe-component": "1",
+    "kapsule": "1"
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",
