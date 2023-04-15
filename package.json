@@ -1,6 +1,6 @@
 {
   "name": "globe-ar",
-  "version": "1.13.4",
+  "version": "1.13.5",
   "description": "UI component for Globe Data Visualization in AR",
   "license": "MIT",
   "type": "module",
