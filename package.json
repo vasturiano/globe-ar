@@ -9,6 +9,7 @@
   "module": "dist/globe-ar.mjs",
   "types": "dist/globe-ar.d.ts",
   "exports": {
+    "types": "./dist/globe-ar.d.ts",
     "umd": "./dist/globe-ar.min.js",
     "default": "./dist/globe-ar.mjs"
   },

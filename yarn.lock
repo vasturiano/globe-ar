@@ -1051,13 +1051,13 @@ acorn@^8.5.0:
   integrity sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==
 
 aframe-globe-component@1:
-  version "1.12.7"
-  resolved "https://registry.yarnpkg.com/aframe-globe-component/-/aframe-globe-component-1.12.7.tgz#236bbb9feebf89ca3abadd8c9843713c6cb31ab2"
-  integrity sha512-VCDcgUicN6mrMoBylO6N22upJpRMo4aXuh3bJX96sWs0MPrUef3TSzw5aj9smfAoKDaIhjIXsUkvPRxHc4p7lQ==
+  version "1.12.8"
+  resolved "https://registry.yarnpkg.com/aframe-globe-component/-/aframe-globe-component-1.12.8.tgz#7ca253e03929108952ecac96b0c0e4c817e8be71"
+  integrity sha512-0bNpcIaQPVe6hFPKnQmjBBdaEhie/EG1H+f9jVAEyr2w9SSE9Av9HerYdVOpKWO130F4WuRDNrwIcolnbnH+6w==
   dependencies:
     accessor-fn "1"
-    three ">=0.88.0"
-    three-globe "^2.25"
+    three ">=0.88"
+    three-globe "2"
 
 ansi-styles@^3.2.1:
   version "3.2.1"
@@ -1211,7 +1211,7 @@ d3-geo-voronoi@^2.0:
   dependencies:
     d3-array "2.5.0 - 3"
 
-"d3-interpolate@1 - 3", "d3-interpolate@1.2.0 - 3":
+"d3-interpolate@1.2.0 - 3", d3-interpolate@3:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/d3-interpolate/-/d3-interpolate-3.0.1.tgz#3c47aa5b32c5b3dfb56ef3fd4342078a632b400d"
   integrity sha512-3bYs1rOD33uo8aqJfKP3JWPAibgw8Zm2+L9vBKEHJ2Rg+viTR7o5Mmv5mZcieN+FRYaAOWX5SJATX6k1PWz72g==
@@ -1251,7 +1251,7 @@ d3-tricontour@1:
     d3-delaunay "6"
     d3-scale "4"
 
-data-joint@^1.3:
+data-joint@1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/data-joint/-/data-joint-1.3.1.tgz#d134950322c90f531e81bbbe8454277549031466"
   integrity sha512-tMK0m4OVGqiA3zkn8JmO6YAqD8UwJqIAx4AAwFl1SKTtKAqcXePuT+n2aayiX9uITtlN3DFtKKTOxJRUc2+HvQ==
@@ -1446,7 +1446,7 @@ json5@^2.2.2:
   resolved "https://registry.yarnpkg.com/json5/-/json5-2.2.3.tgz#78cd6f1a19bdc12b73db5ad0c61efd66c1e29283"
   integrity sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==
 
-kapsule@1, kapsule@^1.14:
+kapsule@1:
   version "1.14.2"
   resolved "https://registry.yarnpkg.com/kapsule/-/kapsule-1.14.2.tgz#07528c2e83b16ec6152d35897b9eb82ce9e5bce6"
   integrity sha512-6ROjWt7DHJ6pBv8RqpcP5uhP7+IgoaF5XavzcRU0U1/5wT/dZgBDNPrdZMNXaWyWLZvAdJ/ONuVRW0Dr9NbLkA==
@@ -1697,7 +1697,7 @@ terser@^5.15.1:
     commander "^2.20.0"
     source-map-support "~0.5.20"
 
-three-conic-polygon-geometry@^1.6:
+three-conic-polygon-geometry@1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/three-conic-polygon-geometry/-/three-conic-polygon-geometry-1.6.1.tgz#72279973322de2eb1781844cb1624b71c883c604"
   integrity sha512-nycXmeeKBiSKWsae/77Z4IjOWnRKuIphFVtJT1Y6yqO0gSwtVVnNcdkMh8wMVlV26zafU4aazHkOSZVPWfpbGA==
@@ -1715,7 +1715,7 @@ three-fatline@^0.6:
   resolved "https://registry.yarnpkg.com/three-fatline/-/three-fatline-0.6.1.tgz#6593d93939b8c38f2c1d8276e7e4b77df06a265d"
   integrity sha512-H0XwIRNTshpD5zS7iBiatCB5CVaBA4D6+vzpws4R+Wg2d2k49xWpRLA/ayzFeoCa67upRnXCFrHWIIGHyJEIqQ==
 
-three-geojson-geometry@^1.3:
+three-geojson-geometry@1:
   version "1.3.1"
   resolved "https://registry.yarnpkg.com/three-geojson-geometry/-/three-geojson-geometry-1.3.1.tgz#0e0aa4ffacba9f491024e053875fc1fdeaa127fc"
   integrity sha512-dUBA0R5Xn43JcIr3n0RjBIxMb+zGUoKODAkJfcbL6Am9qZF0PE11+T3ZSQBnlElOpKdwfox9x6cQ59J1Kh7qFQ==
@@ -1723,33 +1723,33 @@ three-geojson-geometry@^1.3:
     d3-geo "1 - 3"
     earcut "2"
 
-three-globe@^2.25:
-  version "2.25.5"
-  resolved "https://registry.yarnpkg.com/three-globe/-/three-globe-2.25.5.tgz#a584e3f2cd8cf5152d29b3fa243eacb3a5c51892"
-  integrity sha512-yqwiy98uoiN7YdgugOesvjLqh3CRnSSYrRSLbI+TvHR4bLzXQ4/s8msM49URcly16JxvcZNsv+6809IG6W6QJw==
+three-globe@2:
+  version "2.25.7"
+  resolved "https://registry.yarnpkg.com/three-globe/-/three-globe-2.25.7.tgz#e502f3d739a4d720582f7f079a5cf766ee58478a"
+  integrity sha512-MnwRly2R/6ScPpIo3HV0iJiWDBPXgy67M7hplKG8bpSDVDkHQtrDk4c6MsVf231tQx37hH/Cj0r/1fW2j8YZWw==
   dependencies:
     "@tweenjs/tween.js" "18 - 19"
     accessor-fn "1"
-    d3-geo "1 - 3"
-    d3-interpolate "1 - 3"
-    d3-scale "1 - 4"
-    data-joint "^1.3"
+    d3-geo "3"
+    d3-interpolate "3"
+    d3-scale "4"
+    data-joint "1"
     earcut "2"
     frame-ticker "1"
     h3-js "4"
     index-array-by "1"
-    kapsule "^1.14"
-    three-conic-polygon-geometry "^1.6"
+    kapsule "1"
+    three-conic-polygon-geometry "1"
     three-fatline "^0.6"
-    three-geojson-geometry "^1.3"
-    tinycolor2 "^1.6"
+    three-geojson-geometry "1"
+    tinycolor2 "1"
 
-three@>=0.88.0:
+three@>=0.88:
   version "0.151.3"
   resolved "https://registry.yarnpkg.com/three/-/three-0.151.3.tgz#0b3c7de4b070d5b66b15217f42465d67cbfa6004"
   integrity sha512-+vbuqxFy8kzLeO5MgpBHUvP/EAiecaDwDuOPPDe6SbrZr96kccF0ktLngXc7xA7bzyd3N0t2f6mw3Z9y6JCojQ==
 
-tinycolor2@^1.6:
+tinycolor2@1:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.6.0.tgz#f98007460169b0263b97072c5ae92484ce02d09e"
   integrity sha512-XPaBkWQJdsf3pLKJV9p4qN/S+fm2Oj8AIPo1BTUhg5oxkvm9+SVEGFdhyOz7tTdUTfvxMiAs4sp6/eZO2Ew+pw==
