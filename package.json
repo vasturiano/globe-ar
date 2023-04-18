@@ -44,7 +44,7 @@
     "dist/**/*"
   ],
   "dependencies": {
-    "aframe-globe-component": "1",
+    "aframe-globe-component": "^1.13",
     "kapsule": "1"
   },
   "devDependencies": {
@@ -55,7 +55,7 @@
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-terser": "^0.4.1",
     "rimraf": "^5.0.0",
-    "rollup": "^3.20.2",
+    "rollup": "^3.20.6",
     "rollup-plugin-dts": "^5.3.0",
     "typescript": "^5.0.4"
   },

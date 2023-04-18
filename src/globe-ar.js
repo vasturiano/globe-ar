@@ -131,6 +131,8 @@ export default Kapsule({
     objectLat: { default: 'lat' },
     objectLng: { default: 'lng' },
     objectAltitude: { default: 0.01 }, // in units of globe radius
+    objectRotation: {},
+    objectFacesSurface: { default: true },
     objectThreeObject: {},
     customLayerData: { default: [] },
     customThreeObject: {},
@@ -331,6 +333,8 @@ export default Kapsule({
       'objectLat',
       'objectLng',
       'objectAltitude',
+      'objectRotation',
+      'objectFacesSurface',
       'objectThreeObject',
       'customLayerData',
       'customThreeObject',
