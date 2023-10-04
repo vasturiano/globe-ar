@@ -25,14 +25,17 @@ To load any of the examples below:
 * [Elevated Polygons](https://vasturiano.github.io/globe-ar/example/countries-population/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/countries-population/index.html))
 * [Hollow Globe](https://vasturiano.github.io/globe-ar/example/hollow-globe/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/hollow-globe/index.html))
 * [Path Lines](https://vasturiano.github.io/globe-ar/example/random-paths/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/random-paths/index.html))
+* [Heatmap](https://vasturiano.github.io/globe-ar/example/heatmap/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/heatmap/index.html))
 * [Map Labels](https://vasturiano.github.io/globe-ar/example/world-cities/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/world-cities/index.html))
 * [Hexed Country Polygons](https://vasturiano.github.io/globe-ar/example/hexed-polygons/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/hexed-polygons/index.html))
 * [Tiles](https://vasturiano.github.io/globe-ar/example/tiles/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/tiles/index.html))
 * [Ripple Rings](https://vasturiano.github.io/globe-ar/example/random-rings/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/random-rings/index.html))
 * [Custom Layer](https://vasturiano.github.io/globe-ar/example/custom-layer/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/custom-layer/index.html))
 * [World Population](https://vasturiano.github.io/globe-ar/example/world-population/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/world-population/index.html))
+* [Population Heatmap](https://vasturiano.github.io/globe-ar/example/population-heatmap/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/population-heatmap/index.html))
 * [Recent Earthquakes](https://vasturiano.github.io/globe-ar/example/earthquakes/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/earthquakes/index.html))
 * [World Volcanoes](https://vasturiano.github.io/globe-ar/example/volcanoes/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/volcanoes/index.html))
+* [Volcanoes Heatmap](https://vasturiano.github.io/globe-ar/example/volcanoes-heatmap/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/volcanoes-heatmap/index.html))
 * [US outbound international airline routes](https://vasturiano.github.io/globe-ar/example/airline-routes/us-international-outbound.html) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/airline-routes/us-international-outbound.html))
 * [Earth Shield](https://vasturiano.github.io/globe-ar/example/earth-shield/) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/earth-shield/index.html))
 * [Satellites](https://vasturiano.github.io/globe-ar/example/satellites/index.html) ([source](https://github.com/vasturiano/globe-ar/blob/master/example/satellites/index.html))
@@ -70,6 +73,7 @@ Make sure to load these two script tags in your application, required for `AR.js
 * [Arcs Layer](#arcs-layer)
 * [Polygons Layer](#polygons-layer)
 * [Paths Layer](#paths-layer)
+* [Heatmaps Layer](#heatmaps-layer)
 * [Hex Bin Layer](#hex-bin-layer)
 * [Hexed Polygons Layer](#hexed-polygons-layer)
 * [Tiles Layer](#tiles-layer)
@@ -180,6 +184,22 @@ GlobeAR({ configOptions })(<domElement>)
 | <b>pathDashInitialGap</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Path object accessor function, attribute or a numeric constant for the length of the initial gap before the first dash segment, in terms of relative line length. | 0 |
 | <b>pathDashAnimateTime</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Path object accessor function, attribute or a numeric constant for the time duration (in `ms`) to animate the motion of dash positions from the start to the end point for a full line length. A value of `0` disables the animation. | 0 |
 | <b>pathTransitionDuration</b>([<i>num</i>]) | Getter/setter for duration (ms) of the transition to animate path changes. A value of `0` will move the paths immediately to their final position. New paths are animated from start to end. | 1000 |
+
+### Heatmaps Layer
+
+| Method | Description | Default |
+| --- | --- | :--: |
+| <b>heatmapsData</b>([<i>array</i>]) | Getter/setter for the list of heatmap datasets to represent in the heatmaps map layer. Each set of points is represented as an individual global heatmap with varying color and/or altitude, according to the point density. It uses a [Gaussian KDE](https://en.wikipedia.org/wiki/Kernel_density_estimation) to perform the density estimation, based on the great-arc distance between points. | `[]` |
+| <b>heatmapPoints</b>([<i>array</i>, <i>str</i> or <i>fn</i>]) | Heatmap object accessor function, attribute or an array for the set of points that define the heatmap. By default, each point is assumed to be a 2-position array (`[<lat>, <lon>]`). This default behavior can be modified using the `heatmapPointLat` and `heatmapPointLng` methods. | `pnts => pnts` |
+| <b>heatmapPointLat</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Heatmap point object accessor function, attribute or a numeric constant for the latitude coordinate. | `arr => arr[0]` |
+| <b>heatmapPointLng</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Heatmap point object accessor function, attribute or a numeric constant for the longitude coordinate. | `arr => arr[1]` |
+| <b>heatmapPointWeight</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Heatmap point object accessor function, attribute or a numeric constant for the weight of the point. The weight of a point determines its influence on the density of the surrounding area. | 1 |
+| <b>heatmapBandwidth</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Heatmap object accessor function, attribute or a numeric constant for the heatmap bandwidth, in angular degrees. The bandwidth is an internal parameter of the [Gaussian kernel function](https://en.wikipedia.org/wiki/Gaussian_function) and defines how localized is the influence of a point on distant locations. A narrow bandwidth leads to a more spiky representation, while a broad one has smoother curves. | 4 |
+| <b>heatmapColorFn</b>([<i>str</i> or <i>fn</i>]) | Heatmap object accessor function or attribute for the color interpolator function to represent density in the heatmap. This function should receive a number between `0` and `1` (or potentially higher if saturation > 1), and return a color string. | [Turbo colormap](https://blog.research.google/2019/08/turbo-improved-rainbow-colormap-for.html) interpolator with fading opacity |
+| <b>heatmapColorSaturation</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Heatmap object accessor function, attribute or a numeric constant for the color scale saturation. The saturation is a multiplier of the normalized density value (`[0,1]`) before passing it to the color interpolation function. It can be used to dampen outlier peaks in density and bring the data floor into view. | 1.5 |
+| <b>heatmapBaseAltitude</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Heatmap object accessor function, attribute or a numeric constant for the heatmap base floor altitude in terms of globe radius units (`0` = 0 altitude, `1` = globe radius). | 0.01 |
+| <b>heatmapTopAltitude</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Heatmap object accessor function, attribute or a numeric constant for the heatmap top peak altitude in terms of globe radius units (`0` = 0 altitude, `1` = globe radius). An equal value to the base altitude will yield a surface flat heatmap. If a top altitude is set, the variations in density will be used to define the altitude curves between base and top. | - |
+| <b>heatmapsTransitionDuration</b>([<i>num</i>]) | Getter/setter for duration (ms) of the transition to animate heatmap changes. A value of `0` will set the heatmap colors/altitudes immediately in their final position. New heatmaps are animated by rising them from the ground up and gently fading in through the color scale. | 0 |
 
 ### Hex Bin Layer
 

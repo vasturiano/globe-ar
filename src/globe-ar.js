@@ -74,6 +74,17 @@ export default Kapsule({
     pathDashInitialGap: { default: 0 },
     pathDashAnimateTime: { default: 0 }, // ms
     pathTransitionDuration: { default: 1000 }, // ms
+    heatmapsData: { default: [] },
+    heatmapPoints: { default: pnts => pnts },
+    heatmapPointLat: { default: d => d[0] },
+    heatmapPointLng: { default: d => d[1] },
+    heatmapPointWeight: { default: 1 },
+    heatmapBandwidth: { default: 4 }, // Gaussian kernel bandwidth, in angular degrees
+    heatmapColorFn: { default: undefined },
+    heatmapColorSaturation: { default: 1.5 }, // multiplier for color scale max
+    heatmapBaseAltitude: { default: 0.01 }, // in units of globe radius
+    heatmapTopAltitude: {}, // in units of globe radius
+    heatmapsTransitionDuration: { default: 0, triggerUpdate: false }, // ms
     hexBinPointsData: { default: [] },
     hexBinPointLat: { default: 'lat' },
     hexBinPointLng: { default: 'lng' },
@@ -161,6 +172,7 @@ export default Kapsule({
       this.arcsData([]);
       this.polygonsData([]);
       this.pathsData([]);
+      this.heatmapsData([]);
       this.hexBinPointsData([]);
       this.hexPolygonsData([]);
       this.tilesData([]);
@@ -276,6 +288,17 @@ export default Kapsule({
       'pathDashInitialGap',
       'pathDashAnimateTime',
       'pathTransitionDuration',
+      'heatmapsData',
+      'heatmapPoints',
+      'heatmapPointLat',
+      'heatmapPointLng',
+      'heatmapPointWeight',
+      'heatmapBandwidth',
+      'heatmapColorFn',
+      'heatmapColorSaturation',
+      'heatmapBaseAltitude',
+      'heatmapTopAltitude',
+      'heatmapsTransitionDuration',
       'hexBinPointsData',
       'hexBinPointLat',
       'hexBinPointLng',
