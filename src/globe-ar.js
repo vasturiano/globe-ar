@@ -103,7 +103,9 @@ export default Kapsule({
     hexPolygonAltitude: { default: 0.001 }, // in units of globe radius
     hexPolygonResolution: { default: 3 }, // 0-15. Level 0 partitions the earth in 122 (mostly) hexagonal cells. Each subsequent level sub-divides the previous in roughly 7 hexagons.
     hexPolygonMargin: { default: 0.2 }, // in fraction of hex diameter
+    hexPolygonUseDots: { default: false },
     hexPolygonCurvatureResolution: { default: 5 },
+    hexPolygonDotResolution: { default: 12 },
     hexPolygonsTransitionDuration: { default: 0 }, // ms
     tilesData: { default: [] },
     tileLat: { default: 'lat' }, // tile centroid
@@ -318,7 +320,9 @@ export default Kapsule({
       'hexPolygonAltitude',
       'hexPolygonResolution',
       'hexPolygonMargin',
+      'hexPolygonUseDots',
       'hexPolygonCurvatureResolution',
+      'hexPolygonDotResolution',
       'hexPolygonsTransitionDuration',
       'tilesData',
       'tileLat',
