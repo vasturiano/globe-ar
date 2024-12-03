@@ -12,9 +12,10 @@ type hoverObj = {
 // don't surface these internal props from inner ThreeGlobe
 type ExcludedInnerProps = 'setPointOfView' | 'pauseAnimation' | 'resumeAnimation';
 
-export interface GlobeGenericInstance<ChainableInstance>
+export declare class GlobeGeneric<ChainableInstance>
   extends Omit<ThreeGlobeGeneric<ChainableInstance>, ExcludedInnerProps> {
-  (element: HTMLElement): ChainableInstance;
+  constructor(element: HTMLElement, configOptions?: ConfigOptions);
+
   resetProps(): ChainableInstance;
   _destructor(): void;
 
@@ -33,8 +34,6 @@ export interface GlobeGenericInstance<ChainableInstance>
   onClick(callback: (obj: hoverObj) => void): ChainableInstance;
 }
 
-export type GlobeInstance = GlobeGenericInstance<GlobeInstance>;
-
-declare function Globe(configOptions?: ConfigOptions): GlobeInstance;
+declare class Globe extends GlobeGeneric<Globe> {}
 
 export default Globe;

@@ -19,7 +19,7 @@
 
     const getAlt = d => d.elevation * 5e-5;
 
-    const myGlobe = GlobeAR()
+    const myGlobe = new GlobeAR(document.getElementById('globeViz'))
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
       .pointLat('lat')
       .pointLng('lon')
@@ -34,8 +34,7 @@
       .labelColor(d => catColor(d.type))
       .labelText('name')
       .labelSize(0.15)
-      .labelResolution(1)
-      (document.getElementById('globeViz'));
+      .labelResolution(1);
 
     fetch('../datasets/world_volcanoes.json').then(res => res.json()).then(volcanoes => {
       myGlobe.pointsData(volcanoes)

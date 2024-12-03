@@ -19,15 +19,14 @@
       .range(['lightblue', 'darkred'])
       .clamp(true);
 
-    const myGlobe = GlobeAR()
+    const myGlobe = new GlobeAR(document.getElementById('globeViz'))
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
       .hexBinPointLat(d => d.geometry.coordinates[1])
       .hexBinPointLng(d => d.geometry.coordinates[0])
       .hexBinPointWeight(d => d.properties.mag)
       .hexAltitude(({ sumWeight }) => Math.max(0.01, sumWeight * 0.0025))
       .hexTopColor(d => weightColor(d.sumWeight))
-      .hexSideColor(d => weightColor(d.sumWeight))
-      (document.getElementById('globeViz'));
+      .hexSideColor(d => weightColor(d.sumWeight));
 
     fetch('//earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojson').then(res => res.json()).then(equakes => {
       myGlobe.hexBinPointsData(equakes.features);

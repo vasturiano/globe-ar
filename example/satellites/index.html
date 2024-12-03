@@ -20,8 +20,7 @@
     const SAT_SIZE = 100; // km
     const TIME_STEP = 3 * 1000; // per frame
 
-    const world = GlobeAR()
-      (document.getElementById('globeViz'))
+    const world = new GlobeAR(document.getElementById('globeViz'))
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
       .objectLat('lat')
       .objectLng('lng')

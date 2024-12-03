@@ -12,15 +12,14 @@
   <div id="globeViz"></div>
 
   <script>
-    const myGlobe = GlobeAR()
+    const myGlobe = new GlobeAR(document.getElementById('globeViz'))
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
       .heatmapPointLat('lat')
       .heatmapPointLng('lon')
       .heatmapPointWeight(d => d.elevation * 5e-5)
       .heatmapTopAltitude(0.2)
       .heatmapBandwidth(1.35)
-      .heatmapColorSaturation(3.2)
-      (document.getElementById('globeViz'));
+      .heatmapColorSaturation(3.2);
 
     fetch('../datasets/world_volcanoes.json').then(res => res.json()).then(volcanoes => {
       myGlobe.heatmapsData([volcanoes]);

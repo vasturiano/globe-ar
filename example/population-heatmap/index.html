@@ -14,8 +14,7 @@
   <div id="globeViz"></div>
 
   <script>
-    const world = GlobeAR()
-      (document.getElementById('globeViz'))
+    const world = new GlobeAR(document.getElementById('globeViz'))
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
       .heatmapPointLat('lat')
       .heatmapPointLng('lng')

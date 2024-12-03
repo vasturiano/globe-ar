@@ -34,13 +34,11 @@
       )
     );
 
-    GlobeAR()
+    new GlobeAR(document.getElementById('globeViz'))
       .tilesData(tilesData)
       .tileWidth(tileWidth - TILE_MARGIN)
       .tileHeight(tileHeight - TILE_MARGIN)
       .tileAltitude(0.02)
-      .tileMaterial('material')
-      (document.getElementById('globeViz'));
-
+      .tileMaterial('material');
   </script>
 </body>

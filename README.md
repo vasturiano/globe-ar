@@ -52,8 +52,7 @@ or using a *script* tag
 ```
 then
 ```js
-const myGlobe = GlobeAR();
-myGlobe(<myDOMElement>)
+const myGlobe = new GlobeAR(<myDOMElement>)
   .globeImageUrl(<imageUrl>)
   .pointsData(<myData>);
 ```
@@ -87,7 +86,7 @@ Make sure to load these two script tags in your application, required for `AR.js
 
 ### Initialisation
 ```js
-GlobeAR({ configOptions })(<domElement>)
+new GlobeAR(<domElement>, { configOptions })
 ```
 
 | Config options | Description | Default |

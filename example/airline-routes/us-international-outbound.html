@@ -19,9 +19,7 @@
   const COUNTRY = 'United States';
   const OPACITY = 0.22;
 
-  const myGlobe = GlobeAR()
-    (document.getElementById('globeViz'))
-
+  const myGlobe = new GlobeAR(document.getElementById('globeViz'))
     .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
 
     .arcStartLat(d => +d.srcAirport.lat)

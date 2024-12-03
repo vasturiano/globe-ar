@@ -12,8 +12,7 @@
   <div id="globeViz"></div>
 
   <script>
-    const world = GlobeAR()
-      (document.getElementById('globeViz'))
+    const world = new GlobeAR(document.getElementById('globeViz'))
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
       .polygonCapColor(feat => 'rgba(200, 0, 0, 0.6)')
       .polygonSideColor(() => 'rgba(0, 100, 0, 0.05)')

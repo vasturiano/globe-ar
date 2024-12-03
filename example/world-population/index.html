@@ -18,8 +18,7 @@
     const weightColor = d3.scaleSequentialSqrt(d3.interpolateYlOrRd)
       .domain([0, 1e7]);
 
-    const world = GlobeAR()
-      (document.getElementById('globeViz'))
+    const world = new GlobeAR(document.getElementById('globeViz'))
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
       .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
       .hexBinPointWeight('pop')

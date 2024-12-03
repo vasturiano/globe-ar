@@ -24,8 +24,7 @@
       color: ['red', 'white', 'blue', 'green'][Math.round(Math.random() * 3)]
     }));
 
-    const world = GlobeAR()
-      (document.getElementById('globeViz'))
+    const world = new GlobeAR(document.getElementById('globeViz'))
       .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
       .bumpImageUrl('//unpkg.com/three-globe/example/img/earth-topology.png')
       .customLayerData(gData)
