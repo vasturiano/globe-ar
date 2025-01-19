@@ -117,6 +117,15 @@ export default Kapsule({
     tileMaterial: {},
     tileCurvatureResolution: { default: 5 }, // in angular degrees
     tilesTransitionDuration: { default: 1000 }, // ms
+    particlesData: { default: [] },
+    particlesList: { default: d => d }, // arrays of arrays
+    particleLat: { default: 'lat' },
+    particleLng: { default: 'lng' },
+    particleAltitude: { default: 0.01 }, // in units of globe radius
+    particlesSize: { default: 0.01 },
+    particlesSizeAttenuation: { default: true },
+    particlesColor: { default: () => 'white' },
+    particlesTexture: {},
     ringsData: { default: [] },
     ringLat: { default: 'lat' },
     ringLng: { default: 'lng' },
@@ -178,6 +187,7 @@ export default Kapsule({
       this.hexBinPointsData([]);
       this.hexPolygonsData([]);
       this.tilesData([]);
+      this.particlesData([]);
       this.labelsData([]);
       this.objectsData([]);
       this.customLayerData([]);
@@ -334,6 +344,15 @@ export default Kapsule({
       'tileMaterial',
       'tileCurvatureResolution',
       'tilesTransitionDuration',
+      'particlesData',
+      'particlesList',
+      'particleLat',
+      'particleLng',
+      'particleAltitude',
+      'particlesSize',
+      'particlesSizeAttenuation',
+      'particlesColor',
+      'particlesTexture',
       'ringsData',
       'ringLat',
       'ringLng',
