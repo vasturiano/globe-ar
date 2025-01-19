@@ -257,7 +257,7 @@ new GlobeAR(<domElement>, { configOptions })
 | <b>particleLat</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Particle object accessor function, attribute or a numeric constant for the latitude coordinate. | `lat` |
 | <b>particleLng</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Particle object accessor function, attribute or a numeric constant for the longitude coordinate. | `lng` |
 | <b>particleAltitude</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Particle object accessor function, attribute or a numeric constant for the altitude in terms of globe radius units. | 0.01 |
-| <b>particlesSize</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Particle set accessor function, attribute or a numeric constant for the size of all the particles in the group. | `0.01` |
+| <b>particlesSize</b>([<i>num</i>, <i>str</i> or <i>fn</i>]) | Particle set accessor function, attribute or a numeric constant for the size of all the particles in the group. | 0.01 |
 | <b>particlesSizeAttenuation</b>([<i>boolean</i>, <i>str</i> or <i>fn</i>]) | Particle set accessor function, attribute or a boolean constant for whether the size of each particle on the screen should be attenuated according to the distance to the camera. | `true` |
 | <b>particlesColor</b>([<i>str</i> or <i>fn</i>]) | Particle set accessor function or attribute for the color of all the particles in the group. This setting will be ignored if `particlesTexture` is defined. | `white` |
 | <b>particlesTexture</b>([<i>str</i> or <i>fn</i>]) | Particle set accessor function or attribute for the [Texture](https://threejs.org/docs/#api/en/textures/Texture) to be applied to all the particles in the group. | - |
