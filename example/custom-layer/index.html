@@ -32,13 +32,15 @@
         new THREE.SphereGeometry(d.radius),
         new THREE.MeshLambertMaterial({ color: d.color })
       ))
-      .customThreeObjectUpdate((obj, d) => {
-        Object.assign(obj.position, world.getCoords(d.lat, d.lng, d.alt));
-      });
+      .customThreeObjectUpdate((obj, d) =>
+        Object.assign(obj.position, world.getCoords(d.lat, d.lng, d.alt))
+      );
 
     (function moveSpheres() {
       gData.forEach(d => d.lat += 0.2);
-      world.customLayerData(world.customLayerData());
+      world
+        .customLayerData(world.customLayerData().slice())
+        .customThreeObjectUpdate((obj, d) => Object.assign(obj.position, world.getCoords(d.lat, d.lng, d.alt)));
       requestAnimationFrame(moveSpheres);
     })();
 
