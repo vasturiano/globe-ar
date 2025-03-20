@@ -1,10 +1,10 @@
 <head>
   <style> body { margin: 0; } </style>
 
-  <script src="//unpkg.com/aframe"></script>
-  <script src="//unpkg.com/@ar-js-org/ar.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/aframe"></script>
+  <script src="//cdn.jsdelivr.net/npm/@ar-js-org/ar.js"></script>
 
-  <script src="//unpkg.com/globe-ar"></script>
+  <script src="//cdn.jsdelivr.net/npm/globe-ar"></script>
 <!--  <script src="../../dist/globe-ar.js"></script>-->
 </head>
 
@@ -18,13 +18,13 @@
     const TIME_STEP = 3 * 1000; // per frame
 
     const world = new GlobeAR(document.getElementById('globeViz'))
-      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
+      .globeImageUrl('//cdn.jsdelivr.net/npm/three-globe/example/img/earth-blue-marble.jpg')
       .particleLat('lat')
       .particleLng('lng')
       .particleAltitude('alt')
       .particlesColor(() => 'palegreen');
 
-    fetch('//unpkg.com/globe.gl/example/datasets/space-track-leo.txt').then(r => r.text()).then(rawData => {
+    fetch('//cdn.jsdelivr.net/npm/globe.gl/example/datasets/space-track-leo.txt').then(r => r.text()).then(rawData => {
       const tleData = rawData.replace(/\r/g, '').split(/\n(?=[^12])/).map(tle => tle.split('\n'));
       const satData = tleData.map(([name, ...tle]) => ({
         satrec: satellite.twoline2satrec(...tle),

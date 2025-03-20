@@ -1,10 +1,10 @@
 <head>
   <style> body { margin: 0; } </style>
 
-  <script src="//unpkg.com/aframe"></script>
-  <script src="//unpkg.com/@ar-js-org/ar.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/aframe"></script>
+  <script src="//cdn.jsdelivr.net/npm/@ar-js-org/ar.js"></script>
 
-  <script src="//unpkg.com/globe-ar"></script>
+  <script src="//cdn.jsdelivr.net/npm/globe-ar"></script>
 <!--  <script src="../../dist/globe-ar.js"></script>-->
 </head>
 
@@ -15,7 +15,7 @@
     const shieldRing = { lat: 90, lng: 0 };
 
     new GlobeAR(document.getElementById('globeViz'))
-      .globeImageUrl('//unpkg.com/three-globe/example/img/earth-night.jpg')
+      .globeImageUrl('//cdn.jsdelivr.net/npm/three-globe/example/img/earth-night.jpg')
       .ringsData([shieldRing])
       .ringAltitude(0.25)
       .ringColor(() => 'lightblue')
