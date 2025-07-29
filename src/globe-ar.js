@@ -39,8 +39,10 @@ export default Kapsule({
     arcsData: { default: [] },
     arcStartLat: { default: 'startLat' },
     arcStartLng: { default: 'startLng' },
+    arcStartLatitude: { default: 0 },
     arcEndLat: { default: 'endLat' },
     arcEndLng: { default: 'endLng' },
+    arcEndAltitude: { default: 0 },
     arcColor: { default: () => '#ffffaa' },
     arcAltitude: {}, // in units of globe radius
     arcAltitudeAutoScale: { default: 0.5 }, // scale altitude proportional to great-arc distance between the two points
@@ -267,8 +269,10 @@ export default Kapsule({
       'arcsData',
       'arcStartLat',
       'arcStartLng',
+      'arcStartAltitude',
       'arcEndLat',
       'arcEndLng',
+      'arcEndAltitude',
       'arcColor',
       'arcAltitude',
       'arcAltitudeAutoScale',
